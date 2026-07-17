@@ -1,0 +1,29 @@
+# Keyframe Global
+
+> Keyframe Global is a premium cinematic web design and film studio founded and led by Yousef Balawi. The studio designs and builds scroll-driven cinematic websites, brand films, bilingual Arabic and English identities, AI visualization, mobile apps, and digital marketing for clients in Jordan, the GCC (Qatar, UAE, Saudi Arabia), and the USA. Every project is founder-led, fixed-scope, and delivered with senior craft. 54 five-star client reviews. Contact: yousef@keyframeglobal.com, WhatsApp +974 559 629 69 (Qatar) or +962 791 656 555 (Jordan).
+
+## Services
+
+- [Web Experiences](https://keyframeglobal.com/services/web-experiences/): Cinematic, scroll-driven custom websites built with React, Next.js, and Three.js
+- [Cinematic Video](https://keyframeglobal.com/services/cinematic-video/): Brand films, launch films, and ad creative
+- [Brand and Identity](https://keyframeglobal.com/services/brand-identity/): Naming, logo systems, and bilingual Arabic-Latin identities
+- [AI and Visualization](https://keyframeglobal.com/services/ai-visualization/): Photoreal renders and generative concept visuals
+- [Mobile Apps](https://keyframeglobal.com/services/mobile-apps/): iOS and Android apps, including Arabic-first RTL experiences
+- [Digital Marketing](https://keyframeglobal.com/services/digital-marketing/): Social and email campaigns
+
+## Work
+
+- [L'Atelier Elena case study](https://keyframeglobal.com/work/latelier-elena/): Quiet-luxury web presence for a US design-and-build atelier (PageSpeed 93/100/100/91 desktop)
+- [Safarin Steel case study](https://keyframeglobal.com/work/safarin-steel/): Bilingual industrial identity and platform for Jordan's premium steel supplier
+- [Smith's Ranch Drive-In case study](https://keyframeglobal.com/work/smiths-ranch-drive-in/): Retro Americana site for a 1956 California drive-in theater
+
+## Pricing
+
+- [Pricing](https://keyframeglobal.com/pricing/): Custom sites from $5,000 USD; cinematic builds $8,000 to $25,000; platform and e-commerce from $15,000. All projects fixed-scope quoted within two business days.
+- [Pricing data (markdown)](https://keyframeglobal.com/pricing.md)
+
+## Insights
+
+- [What does a website cost in the GCC and Jordan?](https://keyframeglobal.com/insights/website-cost-gcc-jordan/)
+- [What is cinematic web design and when does it pay off?](https://keyframeglobal.com/insights/cinematic-web-design/)
+- [How to choose a creative agency in the GCC](https://keyframeglobal.com/insights/choose-creative-agency-gcc/)

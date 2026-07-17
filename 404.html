@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" class="js" data-theme="dark">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Frame Not Found | Keyframe Global</title>
+<meta name="robots" content="noindex" />
+<link rel="icon" type="image/png" href="/keyframe-favicon.png" />
+<meta name="color-scheme" content="dark light" />
+<meta name="theme-color" content="#08080A" id="metaThemeColor" />
+<script>
+(function () {
+  try {
+    var t = localStorage.getItem("theme");
+    if (!t) t = "dark";                 /* dark is the brand default, regardless of the OS setting */
+    var r = document.documentElement;
+    r.setAttribute("data-theme", t);
+    r.style.colorScheme = t;
+    r.style.background = t === "light" ? "#F4F1EA" : "#08080A";
+  } catch (e) { /* private mode */ }
+})();
+</script>
+<link rel="preload" href="fonts/fraunces-300-900.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="stylesheet" href="/css/main.min.css?v=20260730" />
+<style>
+  body { cursor: auto; }
+  .cursor-ring, .cursor-dot { display: none; }
+  .nf-wrap {
+    min-height: 100vh; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; text-align: center;
+    padding: 40px 24px; position: relative; z-index: 2;
+  }
+  .nf-tc {
+    font-family: "IBM Plex Mono", monospace; font-size: 0.7rem;
+    letter-spacing: 0.22em; color: var(--accent); text-transform: uppercase;
+    margin-bottom: 26px;
+  }
+  .nf-title {
+    font-family: "Fraunces", serif; font-weight: 380; letter-spacing: -0.02em;
+    font-size: clamp(2.4rem, 7vw, 5.2rem); line-height: 1.04; color: var(--fg);
+    max-width: 800px;
+  }
+  .nf-title .it { font-style: italic; color: var(--accent); }
+  .nf-sub { color: var(--fg-muted); margin: 22px 0 38px; max-width: 46ch; }
+  .nf-row { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+  .nf-code {
+    position: fixed; inset: 0; display: flex; align-items: center; justify-content: center;
+    font-family: "Fraunces", serif; font-weight: 600; font-size: clamp(16rem, 45vw, 34rem);
+    color: var(--fg); opacity: 0.04; pointer-events: none; user-select: none; z-index: 1;
+  }
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FWQNN3VRZJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-FWQNN3VRZJ');
+</script>
+</head>
+<body>
+
+<div class="atmos-grain" aria-hidden="true"></div>
+<div class="nf-code" aria-hidden="true">404</div>
+
+<main class="nf-wrap">
+  <div class="nf-tc">00:04:04:00 | Missing frame</div>
+  <h1 class="nf-title">This frame was left on the <span class="it">cutting room</span> floor.</h1>
+  <p class="nf-sub">The page you are looking for does not exist or has moved. The rest of the reel is still playing.</p>
+  <div class="nf-row">
+    <a href="/" class="btn btn-primary"><span class="dot"></span>Back to home</a>
+    <a href="/services/" class="btn btn-ghost">Services</a>
+    <a href="/work/" class="btn btn-ghost">Work</a>
+    <a href="/insights/" class="btn btn-ghost">Insights</a>
+    <a href="/#contact" class="btn btn-ghost">Start a project</a>
+  </div>
+</main>
+
+</body>
+</html>

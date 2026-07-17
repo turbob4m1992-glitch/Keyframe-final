@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="en" class="js" data-theme="dark">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Showcase | The Concept Lab | Keyframe Global</title>
+<meta name="description" content="Scrub through the Keyframe Global reel: live client launches, AI sketch-to-render pipelines, identity systems, mobile products, cinematic post, and campaign worlds, presented as one interactive timeline." />
+
+<meta name="author" content="Yousef Balawi, Keyframe Global" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+<link rel="canonical" href="https://keyframeglobal.com/showcase/" />
+<link rel="icon" type="image/png" href="../keyframe-favicon.png" />
+<link rel="apple-touch-icon" href="../keyframe-favicon.png" />
+<link rel="prefetch" href="../" as="document" /><!-- warm the home page for instant navigation -->
+<meta name="color-scheme" content="dark light" />
+<meta name="theme-color" content="#08080A" id="metaThemeColor" />
+<script>
+(function () {
+  try {
+    var t = localStorage.getItem("theme");
+    if (!t) t = "dark";                 /* dark is the brand default, regardless of the OS setting */
+    var r = document.documentElement;
+    r.setAttribute("data-theme", t);
+    r.style.colorScheme = t;          /* paint the correct canvas immediately, no white flash between pages */
+    r.style.background = t === "light" ? "#F4F1EA" : "#08080A";
+  } catch (e) { /* private mode */ }
+})();
+</script>
+
+<script>
+/* Lite mode: skip the heavy animation stack on constrained devices */
+(function () {
+  try {
+    var c = navigator.connection || {};
+    var lite = c.saveData === true ||
+               /(^|-)2g/.test(c.effectiveType || "") ||
+               (navigator.deviceMemory && navigator.deviceMemory < 4) ||
+               (navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 3);
+    if (lite) {
+      window.__KF_LITE = true;
+      document.documentElement.classList.add("kf-lite");
+    }
+  } catch (e) {}
+})();
+</script>
+
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Showcase | The Concept Lab | Keyframe Global" />
+<meta property="og:description" content="Six sequences, thirty-four stills, one cinematic standard: live web launches, AI visualization pipelines, identity systems, mobile apps, film post, and digital campaigns." />
+<meta property="og:url" content="https://keyframeglobal.com/showcase/" />
+<meta property="og:image" content="https://keyframeglobal.com/og-image.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Showcase | The Concept Lab | Keyframe Global" />
+<meta name="twitter:description" content="Six sequences, thirty-four stills, one cinematic standard: live web launches, AI visualization pipelines, identity systems, mobile apps, film post, and digital campaigns." />
+<meta name="twitter:image" content="https://keyframeglobal.com/og-image.jpg" />
+
+<link rel="preload" href="../fonts/fraunces-300-900.woff2" as="font" type="font/woff2" crossorigin />
+
+
+
+<link rel="stylesheet" href="../css/main.min.css?v=20260730" />
+<noscript>
+<style>
+  .reveal, .split-h, .reveal-text { opacity: 1 !important; transform: none !important; }
+  #loader, #playhead, .lab-dock { display: none !important; }
+  body { cursor: auto; }
+  .lab-after { clip-path: inset(0 0 0 50%) !important; }
+</style>
+</noscript>
+<script type="application/ld+json">
+[
+ { "@context": "https://schema.org", "@type": "CollectionPage", "name": "Keyframe Global Showcase | The Concept Lab", "url": "https://keyframeglobal.com/showcase/", "publisher": { "@id": "https://keyframeglobal.com/#studio", "@type": "ProfessionalService", "name": "Keyframe Global" } },
+ { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [ { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://keyframeglobal.com/" }, { "@type": "ListItem", "position": 2, "name": "Showcase", "item": "https://keyframeglobal.com/showcase/" } ] }
+]
+</script>
+<style>
+/* ============ THE CONCEPT LAB ============ */
+.lab-sec { padding: 96px 0; }
+.lab-sec:first-of-type { padding-top: 40px; }
+
+/* hero */
+.lab-hero-meta { display: flex; flex-wrap: wrap; gap: 12px 34px; margin-top: 34px; font-family: "IBM Plex Mono", monospace; font-size: 0.66rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--fg-muted); }
+.lab-hero-meta b { color: var(--accent); font-weight: 500; }
+.lab-hero-hint { display: inline-flex; align-items: center; gap: 10px; margin-top: 26px; padding: 9px 16px; border: 1px solid var(--line); border-radius: 999px; font-family: "IBM Plex Mono", monospace; font-size: 0.62rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--fg-muted); }
+.lab-hero-hint .pulse { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); animation: labPulse 2s infinite; }
+@keyframes labPulse { 0%,100% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 55%, transparent); } 50% { box-shadow: 0 0 0 7px transparent; } }
+
+/* ---------- frames (shared card chrome) ---------- */
+.lab-frame { position: relative; margin: 0; }
+.lab-media { position: relative; overflow: hidden; border-radius: 20px; border: 1px solid var(--line); background: var(--bg-2); transform: translateZ(0); transition: border-color 0.45s; }
+.lab-frame:hover .lab-media { border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); }
+.lab-media img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.7s cubic-bezier(0.22,1,0.36,1), filter 0.7s; }
+.lab-frame:hover .lab-media img { transform: scale(1.045); }
+/* viewfinder corners */
+.lab-media::before, .lab-media::after { content: ""; position: absolute; width: 22px; height: 22px; z-index: 3; opacity: 0; transition: opacity 0.4s; pointer-events: none; }
+.lab-media::before { top: 12px; left: 12px; border-top: 1.5px solid var(--accent); border-left: 1.5px solid var(--accent); }
+.lab-media::after { bottom: 12px; right: 12px; border-bottom: 1.5px solid var(--accent); border-right: 1.5px solid var(--accent); }
+.lab-frame:hover .lab-media::before, .lab-frame:hover .lab-media::after { opacity: 0.9; }
+/* chips */
+.lab-chip { position: absolute; z-index: 4; font-family: "IBM Plex Mono", monospace; font-size: 0.56rem; letter-spacing: 0.16em; text-transform: uppercase; padding: 5px 11px; border-radius: 999px; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); pointer-events: none; }
+.lab-chip.tag { top: 14px; left: 14px; color: var(--fg); background: rgba(8,8,10,0.55); border: 1px solid var(--line-strong); }
+[data-theme="light"] .lab-chip.tag { background: rgba(244,241,234,0.7); }
+.lab-chip.tag.live { color: #0A0A0A; background: var(--accent); border-color: var(--accent); display: inline-flex; align-items: center; gap: 7px; }
+.lab-chip.tag.live::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: #0A0A0A; animation: labPulse 2s infinite; }
+.lab-chip.tc { top: 14px; right: 14px; color: var(--accent); background: rgba(8,8,10,0.55); border: 1px solid rgba(235,181,78,0.3); opacity: 0; transform: translateY(-4px); transition: opacity 0.4s, transform 0.4s; }
+.lab-frame:hover .lab-chip.tc { opacity: 1; transform: none; }
+/* caption below media */
+.lab-cap { display: flex; align-items: baseline; gap: 14px; padding: 16px 6px 0; }
+.lab-cap .no { font-family: "IBM Plex Mono", monospace; font-size: 0.6rem; letter-spacing: 0.14em; color: var(--accent); white-space: nowrap; }
+.lab-cap h3 { font-family: "Fraunces", serif; font-weight: 440; font-size: 1.22rem; letter-spacing: -0.02em; margin: 0; }
+.lab-cap p { color: var(--fg-muted); font-size: 0.85rem; line-height: 1.55; margin: 4px 0 0; }
+.lab-frame[data-lb] { cursor: zoom-in; }
+
+/* ---------- live client cinema features ---------- */
+.lab-cinema { display: grid; gap: 40px; }
+.lab-feature .lab-media { aspect-ratio: 16 / 9; border-radius: 24px; }
+.lab-feature .lab-media img { transform: scale(1.12); will-change: transform; }
+.lab-feature:hover .lab-media img { transform: scale(1.16); }
+.lab-feature .lab-shade { position: absolute; inset: 0; z-index: 2; background: linear-gradient(to top, rgba(5,5,7,0.82) 0%, rgba(5,5,7,0.25) 34%, transparent 60%); pointer-events: none; }
+.lab-feature .lab-info { position: absolute; z-index: 4; left: 28px; right: 28px; bottom: 24px; display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; }
+.lab-feature .lab-info h3 { font-family: "Fraunces", serif; font-weight: 460; font-size: clamp(1.5rem, 3.1vw, 2.5rem); letter-spacing: -0.02em; margin: 0; color: #F5F2EC; }
+.lab-feature .lab-info p { margin: 8px 0 0; max-width: 560px; color: rgba(245,242,236,0.72); font-size: 0.92rem; line-height: 1.55; }
+.lab-feature .lab-open { flex: none; display: inline-flex; align-items: center; gap: 8px; font-family: "IBM Plex Mono", monospace; font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); border: 1px solid rgba(235,181,78,0.4); border-radius: 999px; padding: 9px 15px; backdrop-filter: blur(8px); background: rgba(8,8,10,0.35); transition: background 0.35s, color 0.35s; }
+.lab-feature:hover .lab-open { background: var(--accent); color: #0A0A0A; }
+
+/* ---------- storyboard grid (asymmetric) ---------- */
+.lab-board { display: grid; grid-template-columns: repeat(12, 1fr); gap: 26px; }
+.lab-board .lab-frame { grid-column: span 12; }
+@media (min-width: 760px) {
+  .lab-board .s5 { grid-column: span 5; }
+  .lab-board .s7 { grid-column: span 7; }
+  .lab-board .s6 { grid-column: span 6; }
+  .lab-board .s4 { grid-column: span 4; }
+  .lab-board .s8 { grid-column: span 8; }
+  .lab-board .s12 { grid-column: span 12; }
+  .lab-board .drop { transform: translateY(46px); }
+}
+.lab-board .lab-media { aspect-ratio: 1 / 1; }
+.lab-board .r43 .lab-media { aspect-ratio: 4 / 3; }
+/* Desktop: every showcase image 10% smaller (frame shrinks to 90%, centered in its cell) */
+@media (min-width: 1024px) {
+  .lab-frame { width: 90%; justify-self: center; margin-left: auto; margin-right: auto; }
+}
+/* full-width frames render as cinematic banners, never viewport-tall squares */
+@media (min-width: 760px) { .lab-board .s12 .lab-media { aspect-ratio: 21 / 9; } }
+.lab-board .s12 .lab-media { max-height: 78vh; }
+.lab-board .r169 .lab-media { aspect-ratio: 16 / 9; }
+.lab-board .r167 .lab-media { aspect-ratio: 16 / 7; }
+.lab-board.pad-drop { padding-bottom: 46px; }
+
+/* ---------- AI compare (sketch to render wipe) ---------- */
+.lab-pairs { display: grid; grid-template-columns: 1fr; gap: 34px; }
+@media (min-width: 860px) { .lab-pairs { grid-template-columns: 1fr 1fr; } }
+.lab-compare { position: relative; overflow: hidden; border-radius: 20px; border: 1px solid var(--line); aspect-ratio: 1 / 1; cursor: ew-resize; touch-action: pan-y; --x: 62%; }
+.lab-compare img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; user-select: none; -webkit-user-drag: none; }
+.lab-compare .lab-after { clip-path: inset(0 0 0 var(--x)); }
+.lab-compare .lab-blade { position: absolute; top: 0; bottom: 0; left: var(--x); width: 2px; margin-left: -1px; z-index: 5; background: linear-gradient(to bottom, transparent, var(--accent) 18%, var(--accent) 82%, transparent); pointer-events: none; }
+.lab-compare .lab-knob { position: absolute; top: 50%; left: var(--x); transform: translate(-50%, -50%); z-index: 6; width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #0A0A0A; background: var(--accent); box-shadow: 0 4px 22px rgba(0,0,0,0.45); pointer-events: none; }
+.lab-compare .lab-knob svg { width: 18px; height: 18px; }
+.lab-compare .cl { position: absolute; z-index: 4; bottom: 14px; font-family: "IBM Plex Mono", monospace; font-size: 0.56rem; letter-spacing: 0.18em; text-transform: uppercase; padding: 5px 11px; border-radius: 999px; background: rgba(8,8,10,0.6); backdrop-filter: blur(6px); pointer-events: none; }
+.lab-compare .cl.a { left: 14px; color: #F5F2EC; border: 1px solid rgba(245,242,236,0.25); }
+.lab-compare .cl.b { right: 14px; color: var(--accent); border: 1px solid rgba(235,181,78,0.35); }
+.lab-compare .lab-expand { position: absolute; top: 12px; right: 12px; z-index: 7; width: 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--fg); background: rgba(8,8,10,0.55); border: 1px solid var(--line-strong); backdrop-filter: blur(8px); cursor: zoom-in; transition: color 0.3s, background 0.3s; }
+.lab-compare .lab-expand:hover { background: var(--accent); color: #0A0A0A; }
+.lab-compare .lab-expand svg { width: 16px; height: 16px; }
+.lab-compare:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+/* ---------- timeline dock ---------- */
+.lab-dock { position: fixed; left: 50%; transform: translateX(-50%); bottom: 16px; z-index: 70; width: min(1080px, calc(100% - 20px)); padding: 12px 20px 10px; border: 1px solid var(--line-strong); border-radius: 18px; background: color-mix(in srgb, var(--bg) 72%, transparent); backdrop-filter: blur(20px) saturate(1.3); -webkit-backdrop-filter: blur(20px) saturate(1.3); box-shadow: 0 12px 40px rgba(0,0,0,0.35); transition: opacity 0.5s, transform 0.5s; }
+.lab-dock.is-hidden { opacity: 0; transform: translateX(-50%) translateY(24px); pointer-events: none; }
+.lab-track { position: relative; height: 3px; border-radius: 2px; margin-bottom: 10px; background: repeating-linear-gradient(90deg, var(--line-strong) 0 1px, transparent 1px calc(100% / 24)); }
+.lab-track .fill { position: absolute; left: 0; top: 0; bottom: 0; width: 0%; border-radius: 2px; background: linear-gradient(90deg, color-mix(in srgb, var(--accent) 55%, transparent), var(--accent)); box-shadow: 0 0 12px color-mix(in srgb, var(--accent) 60%, transparent); }
+.lab-track .head { position: absolute; top: 50%; left: 0%; width: 11px; height: 11px; transform: translate(-50%, -50%) rotate(45deg); background: var(--accent); border-radius: 2px; box-shadow: 0 0 14px color-mix(in srgb, var(--accent) 80%, transparent); }
+.lab-marks { display: flex; justify-content: space-between; gap: 2px; }
+.lab-mark { appearance: none; background: none; border: 0; padding: 9px 6px; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 7px; min-height: 44px; border-radius: 10px; color: var(--fg-faint); font-family: "IBM Plex Mono", monospace; font-size: 0.56rem; letter-spacing: 0.14em; text-transform: uppercase; transition: color 0.35s, background 0.3s; flex: 1; -webkit-tap-highlight-color: transparent; }
+.lab-mark .d { width: 8px; height: 8px; transform: rotate(45deg); border: 1px solid currentColor; border-radius: 1px; transition: background 0.35s, box-shadow 0.35s; }
+.lab-mark:hover { color: var(--fg-muted); background: color-mix(in srgb, var(--accent) 12%, transparent); }
+.lab-mark:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.lab-mark.on { color: var(--accent); }
+.lab-mark.on .d { background: var(--accent); border-color: var(--accent); box-shadow: 0 0 10px color-mix(in srgb, var(--accent) 70%, transparent); }
+.lab-mark .lbl-s { display: none; }
+@media (max-width: 720px) {
+  .lab-dock { padding: 10px 12px 8px; bottom: 10px; }
+  .lab-marks { gap: 0; }
+  .lab-mark { padding: 8px 2px; min-height: 46px; }
+  .lab-mark .lbl-f { display: none; }
+  .lab-mark .lbl-s { display: block; }
+}
+
+/* ---------- lightbox ---------- */
+.lab-lb { position: fixed; inset: 0; z-index: 200; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 22px; background: rgba(5,5,7,0.93); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); opacity: 0; pointer-events: none; transition: opacity 0.35s; }
+.lab-lb.open { opacity: 1; pointer-events: auto; }
+.lab-lb img { max-width: min(1280px, 100%); max-height: calc(100vh - 150px); border-radius: 14px; border: 1px solid var(--line-strong); box-shadow: 0 30px 90px rgba(0,0,0,0.6); }
+.lab-lb .bar { display: flex; align-items: baseline; gap: 16px; margin-top: 16px; max-width: min(1280px, 100%); }
+.lab-lb .bar .t { font-family: "Fraunces", serif; font-size: 1.15rem; color: #F5F2EC; }
+.lab-lb .bar .n { color: rgba(245,242,236,0.6); font-size: 0.85rem; }
+.lab-lb .bar .c { font-family: "IBM Plex Mono", monospace; font-size: 0.62rem; letter-spacing: 0.16em; color: var(--accent); white-space: nowrap; margin-left: auto; }
+.lab-lb button { appearance: none; border: 1px solid rgba(245,242,236,0.25); background: rgba(8,8,10,0.5); color: #F5F2EC; width: 46px; height: 46px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background 0.3s, color 0.3s; }
+.lab-lb button:hover { background: var(--accent); color: #0A0A0A; border-color: var(--accent); }
+.lab-lb button svg { width: 18px; height: 18px; }
+.lab-lb .x { position: absolute; top: 20px; right: 20px; }
+.lab-lb .pv { position: absolute; left: 18px; top: 50%; transform: translateY(-50%); }
+.lab-lb .nx { position: absolute; right: 18px; top: 50%; transform: translateY(-50%); }
+@media (max-width: 720px) { .lab-lb .pv { left: 8px; } .lab-lb .nx { right: 8px; } }
+html.lab-noscroll, html.lab-noscroll body { overflow: hidden !important; }
+
+/* breathing room above the fixed dock at page end */
+.lab-endpad { height: 40px; }
+@media (prefers-reduced-motion: reduce) {
+  .lab-media img, .lab-feature .lab-media img { transition: none; }
+}
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FWQNN3VRZJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-FWQNN3VRZJ');
+</script>
+</head>
+<body>
+
+
+<div id="playhead" aria-hidden="true"></div>
+
+<canvas id="field"></canvas>
+<div class="atmos-grid" aria-hidden="true"></div>
+<div class="atmos-grain" aria-hidden="true"></div>
+<div class="cursor-ring" aria-hidden="true"><span class="cursor-label"></span></div>
+<div class="cursor-dot" aria-hidden="true"></div>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <a class="brand" href="../#top" aria-label="Keyframe Global home">
+    <img src="../logo-dark.png" alt="Keyframe Global" class="mark logo-dark" style="height: 28px; width: auto;" />
+    <img src="../keyframe_logo_black.png?v=2" alt="Keyframe Global" class="mark logo-light" style="height: 28px; width: auto;" />
+    <span class="tc" id="navtc">00:00:00:01</span>
+  </a>
+  <ul class="nav-links" aria-label="Primary">
+    <li style="--gradient-from: #EBB54E; --gradient-to: #D98A2E;" class="nav-item">
+      <a href="../#top">
+        <span class="nav-bg"></span><span class="nav-glow"></span>
+        <span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span>
+        <span class="nav-title">Home</span>
+      </a>
+    </li>
+    <li style="--gradient-from: #7CC4C0; --gradient-to: #4E9E99;" class="nav-item">
+      <a href="../#services">
+        <span class="nav-bg"></span><span class="nav-glow"></span>
+        <span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></span>
+        <span class="nav-title">Services</span>
+      </a>
+    </li>
+    <li style="--gradient-from: #EBB54E; --gradient-to: #7CC4C0;" class="nav-item">
+      <a href="../work/">
+        <span class="nav-bg"></span><span class="nav-glow"></span>
+        <span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></span>
+        <span class="nav-title">Work</span>
+      </a>
+    </li>
+    <li style="--gradient-from: #EBB54E; --gradient-to: #7CC4C0;" class="nav-item active" aria-current="page">
+      <a href="./">
+        <span class="nav-bg"></span><span class="nav-glow"></span>
+        <span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M7 4v16M17 4v16M2 9h5M2 15h5M17 9h5M17 15h5"/></svg></span>
+        <span class="nav-title">Showcase</span>
+      </a>
+    </li>
+    <li style="--gradient-from: #D98A2E; --gradient-to: #EBB54E;" class="nav-item">
+      <a href="../#method">
+        <span class="nav-bg"></span><span class="nav-glow"></span>
+        <span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg></span>
+        <span class="nav-title">Method</span>
+      </a>
+    </li>
+    <li style="--gradient-from: #4E9E99; --gradient-to: #7CC4C0;" class="nav-item">
+      <a href="../#voices">
+        <span class="nav-bg"></span><span class="nav-glow"></span>
+        <span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg></span>
+        <span class="nav-title">Studio</span>
+      </a>
+    </li>
+    <li style="--gradient-from: #EBB54E; --gradient-to: #E0654E;" class="nav-item">
+      <a href="#contact">
+        <span class="nav-bg"></span><span class="nav-glow"></span>
+        <span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
+        <span class="nav-title">Contact</span>
+      </a>
+    </li>
+    <li style="--gradient-from: #E0654E; --gradient-to: #EBB54E;" class="nav-item">
+      <a href="../insights/">
+        <span class="nav-bg"></span><span class="nav-glow"></span>
+        <span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></span>
+        <span class="nav-title">Insights</span>
+      </a>
+    </li>
+  </ul>
+  <div class="nav-right">
+    <button class="theme-toggle" id="themeBtn" aria-label="Toggle light and dark theme">
+      <svg class="tt-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+      <svg class="tt-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="M4.93 4.93l1.41 1.41"/><path d="M17.66 17.66l1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="M6.34 17.66l-1.41 1.41"/><path d="M19.07 4.93l-1.41 1.41"/></svg>
+    </button>
+    <a href="#contact" class="btn btn-primary magnetic"><span class="dot"></span>Start a project</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <nav aria-label="Mobile">
+    <a class="mm-link" href="../#top" style="--i:0"><span class="no">01</span>Home</a>
+    <a class="mm-link" href="../#services" style="--i:1"><span class="no">02</span>Services</a>
+    <a class="mm-link" href="../work/" style="--i:2"><span class="no">03</span>Work</a>
+    <a class="mm-link" href="./" style="--i:3" aria-current="page"><span class="no">04</span>Showcase</a>
+    <a class="mm-link" href="../#method" style="--i:4"><span class="no">05</span>Method</a>
+    <a class="mm-link" href="../#voices" style="--i:5"><span class="no">06</span>Studio</a>
+    <a class="mm-link" href="#contact" style="--i:6"><span class="no">07</span>Contact</a>
+    <a class="mm-link" href="../insights/" style="--i:7"><span class="no">08</span>Insights</a>
+  </nav>
+  <div class="mm-foot">
+    <a href="mailto:yousef@keyframeglobal.com">yousef@keyframeglobal.com</a>
+    <a href="https://wa.me/97455962969" target="_blank" rel="noopener">WhatsApp +974 559 629 69</a>
+    <span>Amman . Dubai . Riyadh . Doha . New York</span>
+  </div>
+</div>
+
+<div class="shell" id="top">
+
+  <!-- HERO -->
+  <section class="hero sc-hero" id="hero" style="min-height:auto; justify-content:flex-start; padding:150px 0 30px;">
+    <div class="wrap">
+      <div style="max-width: 980px;">
+        <div class="crumbs-line reveal"><a href="../">Home</a> / Showcase</div>
+        <div class="eyebrow reveal" style="margin-bottom:22px;">The Concept Lab</div>
+        <h1 class="hero-title reveal-text" style="font-size: clamp(2.3rem, 5.6vw, 4.6rem); line-height: 1.05;">
+          One reel. Six sequences.<br />Cut it <span class="highlight-pivotal">yourself</span>.
+        </h1>
+        <p class="hero-sub reveal" style="margin-top: 22px; max-width: 720px;">Live client launches and in-house concept studies on a single timeline. Scrub the dock below, drag the wipes in the AI lab, and open any frame full screen.</p>
+        <div class="lab-hero-meta reveal">
+          <span><b>34</b> stills</span>
+          <span><b>06</b> sequences</span>
+          <span><b>03</b> live builds</span>
+          <span><b>04</b> sketch-to-render wipes</span>
+        </div>
+        <div class="lab-hero-hint reveal"><span class="pulse"></span>Use the timeline dock to jump between sequences</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEQ 01 / WEB -->
+  <section class="sec lab-sec" id="web">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="eyebrow reveal">SEQ 01 &middot; 00:00:10:00 / Web Experiences</div>
+          <h2 class="split-h">Cinematic <span class="it">web</span>, live and imagined</h2>
+          <p class="aside reveal">Three client launches presented as film frames, then six concept directions from the lab.</p>
+        </div>
+      </div>
+
+      <div class="lab-cinema">
+        <figure class="lab-frame lab-feature reveal" data-lb data-lb-src="../img/showcase/latelier_mockup_presentation.jpg" data-lb-title="L'Atelier Elena" data-lb-note="Quiet-luxury architecture studio, live build">
+          <div class="lab-media lab-par">
+            <picture>
+              <source srcset="../img/showcase/latelier_mockup_presentation.avif" type="image/avif" />
+              <img src="../img/showcase/latelier_mockup_presentation.jpg" alt="L'Atelier Elena website presented on laptop and phone" loading="eager" decoding="async" />
+            </picture>
+            <div class="lab-shade"></div>
+            <span class="lab-chip tag live">Live Client</span>
+            <span class="lab-chip tc">TC 00:00:12:08</span>
+            <div class="lab-info">
+              <div>
+                <h3>L'Atelier Elena</h3>
+                <p>Quiet luxury for an architecture studio: editorial serif, generous negative space, a 93 desktop performance score.</p>
+              </div>
+              <span class="lab-open">Open frame
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
+              </span>
+            </div>
+          </div>
+        </figure>
+
+        <figure class="lab-frame lab-feature reveal" data-lb data-lb-src="../img/showcase/safarin_mockup_presentation.jpg" data-lb-title="Safarin Steel" data-lb-note="Bilingual industrial platform, live build">
+          <div class="lab-media lab-par">
+            <picture>
+              <source srcset="../img/showcase/safarin_mockup_presentation.avif" type="image/avif" />
+              <img src="../img/showcase/safarin_mockup_presentation.jpg" alt="Safarin Steel website presented on laptop and phone" loading="lazy" decoding="async" />
+            </picture>
+            <div class="lab-shade"></div>
+            <span class="lab-chip tag live">Live Client</span>
+            <span class="lab-chip tc">TC 00:00:24:16</span>
+            <div class="lab-info">
+              <div>
+                <h3>Safarin Steel</h3>
+                <p>A bilingual industrial platform for Jordan's premium steel supplier: dark-luxe, high contrast, built to command.</p>
+              </div>
+              <span class="lab-open">Open frame
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
+              </span>
+            </div>
+          </div>
+        </figure>
+
+        <figure class="lab-frame lab-feature reveal" data-lb data-lb-src="../img/showcase/drivein_mockup_presentation.jpg" data-lb-title="Smith's Ranch Drive-In" data-lb-note="Retro Americana for a 1956 drive-in, live build">
+          <div class="lab-media lab-par">
+            <picture>
+              <source srcset="../img/showcase/drivein_mockup_presentation.avif" type="image/avif" />
+              <img src="../img/showcase/drivein_mockup_presentation.jpg" alt="Smith's Ranch Drive-In website presented on laptop and phone" loading="lazy" decoding="async" />
+            </picture>
+            <div class="lab-shade"></div>
+            <span class="lab-chip tag live">Live Client</span>
+            <span class="lab-chip tc">TC 00:00:37:04</span>
+            <div class="lab-info">
+              <div>
+                <h3>Smith's Ranch Drive-In</h3>
+                <p>Retro Americana for a 1956 California drive-in: vintage type, neon accents, seamless showtimes and snack bar.</p>
+              </div>
+              <span class="lab-open">Open frame
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
+              </span>
+            </div>
+          </div>
+        </figure>
+      </div>
+
+      <div class="lab-board pad-drop" style="margin-top: 48px;">
+        <figure class="lab-frame s5 reveal" data-lb data-lb-src="../img/showcase/web2_realestate.jpg" data-lb-title="Dusk Estates" data-lb-note="Cinematic real-estate concept">
+          <div class="lab-media">
+            <picture><source srcset="../img/showcase/web2_realestate.avif" type="image/avif" /><img src="../img/showcase/web2_realestate.jpg" alt="Cinematic real-estate website concept with a villa at dusk" loading="lazy" decoding="async" /></picture>
+            <span class="lab-chip tag">Concept</span><span class="lab-chip tc">TC 00:00:49:12</span>
+          </div>
+          <figcaption class="lab-cap"><span class="no">FR 04</span><div><h3>Dusk Estates</h3><p>Full-bleed villa at dusk, elegant serif, a thin gold filter bar.</p></div></figcaption>
+        </figure>
+        <figure class="lab-frame s7 drop reveal" data-lb data-lb-src="../img/showcase/web2_hospitality.jpg" data-lb-title="Maison Noire" data-lb-note="Luxury hospitality booking concept">
+          <div class="lab-media r43">
+            <picture><source srcset="../img/showcase/web2_hospitality.avif" type="image/avif" /><img src="../img/showcase/web2_hospitality.jpg" alt="Luxury hotel website concept with candle-lit hero and frosted booking widget" loading="lazy" decoding="async" /></picture>
+            <span class="lab-chip tag">Concept</span><span class="lab-chip tc">TC 00:00:58:00</span>
+          </div>
+          <figcaption class="lab-cap"><span class="no">FR 05</span><div><h3>Maison Noire</h3><p>A candle-lit booking experience: frosted glass over deep shadow, gold serif type.</p></div></figcaption>
+        </figure>
+        <figure class="lab-frame s4 reveal" data-lb data-lb-src="../img/showcase/web_exp_immersive_1784029262169.jpg" data-lb-title="Immersive Scroll" data-lb-note="Scroll-driven WebGL depth study">
+          <div class="lab-media">
+            <picture><source srcset="../img/showcase/web_exp_immersive_1784029262169.avif" type="image/avif" /><img src="../img/showcase/web_exp_immersive_1784029262169.jpg" alt="Immersive dark web experience concept with 3D depth" loading="lazy" decoding="async" /></picture>
+            <span class="lab-chip tag">Concept</span><span class="lab-chip tc">TC 00:01:06:12</span>
+          </div>
+          <figcaption class="lab-cap"><span class="no">FR 06</span><div><h3>Immersive Scroll</h3><p>Depth, motion, and cinematic pacing for a perception-led brand.</p></div></figcaption>
+        </figure>
+        <figure class="lab-frame s4 drop reveal" data-lb data-lb-src="../img/showcase/web_exp_luxury_1784029271589.jpg" data-lb-title="Editorial Luxe" data-lb-note="Magazine-grade layout study">
+          <div class="lab-media">
+            <picture><source srcset="../img/showcase/web_exp_luxury_1784029271589.avif" type="image/avif" /><img src="../img/showcase/web_exp_luxury_1784029271589.jpg" alt="Luxury editorial website concept" loading="lazy" decoding="async" /></picture>
+            <span class="lab-chip tag">Concept</span><span class="lab-chip tc">TC 00:01:14:20</span>
+          </div>
+          <figcaption class="lab-cap"><span class="no">FR 07</span><div><h3>Editorial Luxe</h3><p>Negative space and serif restraint, magazine-grade.</p></div></figcaption>
+        </figure>
+        <figure class="lab-frame s4 reveal" data-lb data-lb-src="../img/showcase/web_exp_dashboard_1784030073625.jpg" data-lb-title="SaaS Command" data-lb-note="Premium product interface concept">
+          <div class="lab-media">
+            <picture><source srcset="../img/showcase/web_exp_dashboard_1784030073625.avif" type="image/avif" /><img src="../img/showcase/web_exp_dashboard_1784030073625.jpg" alt="Premium SaaS dashboard interface concept" loading="lazy" decoding="async" /></picture>
+            <span class="lab-chip tag">Concept</span><span class="lab-chip tc">TC 00:01:22:08</span>
+          </div>
+          <figcaption class="lab-cap"><span class="no">FR 08</span><div><h3>SaaS Command</h3><p>Glassmorphism panels, teal telemetry on charcoal.</p></div></figcaption>
+        </figure>
+        <figure class="lab-frame s12 reveal" data-lb data-lb-src="../img/showcase/web2_portfolio.jpg" data-lb-title="The Motion Reel" data-lb-note="Studio portfolio concept built like a title sequence">
+          <div class="lab-media r167">
+            <picture><source srcset="../img/showcase/web2_portfolio.avif" type="image/avif" /><img src="../img/showcase/web2_portfolio.jpg" alt="Dark motion-design studio portfolio website concept" loading="lazy" decoding="async" /></picture>
+            <span class="lab-chip tag">Concept</span><span class="lab-chip tc">TC 00:01:24:00</span>
+          </div>
+          <figcaption class="lab-cap"><span class="no">FR 09</span><div><h3>The Motion Reel</h3><p>A portfolio built like a title sequence: oversized italic serif over a grid of living thumbnails.</p></div></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEQ 02 / AI -->
+  <section class="sec lab-sec" id="ai">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="eyebrow reveal">SEQ 02 &middot; 00:01:24:12 / AI and Visualization</div>
+          <h2 class="split-h">Drag the blade: sketch to <span class="it">photoreal</span></h2>
+          <p class="aside reveal">Four products, one pipeline. Every render starts as an annotated pencil study; pull the gold blade to see the translation.</p>
+        </div>
+      </div>
+      <div class="lab-pairs">
+        <div class="lab-frame reveal">
+          <div class="lab-compare" role="slider" tabindex="0" aria-label="Chronos Tourbillon, drag to compare sketch and render" aria-valuemin="0" aria-valuemax="100" aria-valuenow="62">
+            <img class="lab-base" src="../img/showcase/ai_vis_sketch_1784029495656.jpg" alt="Hand-drawn annotated sketch of a skeleton tourbillon watch" loading="lazy" decoding="async" />
+            <img class="lab-after" src="../img/showcase/ai_vis_3d_product_1784029418689.jpg" alt="Photoreal 3D render of the same tourbillon watch" loading="lazy" decoding="async" />
+            <span class="lab-blade"></span>
+            <span class="lab-knob"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4"/></svg></span>
+            <span class="cl a">Sketch</span><span class="cl b">Render</span>
+            <button class="lab-expand" data-lb data-lb-src="../img/showcase/ai_vis_3d_product_1784029418689.jpg" data-lb-title="Chronos Tourbillon" data-lb-note="Photoreal render from the annotated sketch" aria-label="Open Chronos Tourbillon render full screen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></button>
+          </div>
+          <figcaption class="lab-cap"><span class="no">FR 10</span><div><h3>Chronos Tourbillon</h3><p>Production-ready horology renders before a physical prototype exists.</p></div></figcaption>
+        </div>
+        <div class="lab-frame reveal">
+          <div class="lab-compare" role="slider" tabindex="0" aria-label="Amber Facet perfume, drag to compare sketch and render" aria-valuemin="0" aria-valuemax="100" aria-valuenow="62">
+            <img class="lab-base" src="../img/showcase/ai2_perfume_sketch.jpg" alt="Designer's concept sketch of a faceted perfume bottle on black paper" loading="lazy" decoding="async" />
+            <img class="lab-after" src="../img/showcase/ai2_perfume_render.jpg" alt="Photoreal render of a faceted glass perfume bottle with gold cap" loading="lazy" decoding="async" />
+            <span class="lab-blade"></span>
+            <span class="lab-knob"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4"/></svg></span>
+            <span class="cl a">Sketch</span><span class="cl b">Render</span>
+            <button class="lab-expand" data-lb data-lb-src="../img/showcase/ai2_perfume_render.jpg" data-lb-title="Amber Facet" data-lb-note="Faceted glass, brushed gold, deep amber" aria-label="Open Amber Facet render full screen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></button>
+          </div>
+          <figcaption class="lab-cap"><span class="no">FR 11</span><div><h3>Amber Facet</h3><p>Faceted glass and brushed gold, sketched, then lit like an editorial.</p></div></figcaption>
+        </div>
+        <div class="lab-frame reveal">
+          <div class="lab-compare" role="slider" tabindex="0" aria-label="Flagship Runner sneaker, drag to compare sketch and render" aria-valuemin="0" aria-valuemax="100" aria-valuenow="62">
+            <img class="lab-base" src="../img/showcase/ai2_sneaker_sketch.jpg" alt="Concept sketch of a futuristic performance sneaker with annotations" loading="lazy" decoding="async" />
+            <img class="lab-after" src="../img/showcase/ai2_sneaker_render.jpg" alt="Photoreal render of a matte black sneaker with teal accents and translucent gold sole" loading="lazy" decoding="async" />
+            <span class="lab-blade"></span>
+            <span class="lab-knob"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4"/></svg></span>
+            <span class="cl a">Sketch</span><span class="cl b">Render</span>
+            <button class="lab-expand" data-lb data-lb-src="../img/showcase/ai2_sneaker_render.jpg" data-lb-title="Flagship Runner" data-lb-note="Matte black, teal accents, translucent gold sole" aria-label="Open Flagship Runner render full screen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></button>
+          </div>
+          <figcaption class="lab-cap"><span class="no">FR 12</span><div><h3>Flagship Runner</h3><p>Studio-lit product photography: matte black, teal, a gold-tinted sole.</p></div></figcaption>
+        </div>
+        <div class="lab-frame reveal">
+          <div class="lab-compare" role="slider" tabindex="0" aria-label="Night Aero hypercar, drag to compare sketch and render" aria-valuemin="0" aria-valuemax="100" aria-valuenow="62">
+            <img class="lab-base" src="../img/showcase/ai2_car_sketch.jpg" alt="Concept sketch of a hypercar front detail on black paper" loading="lazy" decoding="async" />
+            <img class="lab-after" src="../img/showcase/ai2_car_render.jpg" alt="Photoreal render of a matte charcoal concept hypercar with teal underglow" loading="lazy" decoding="async" />
+            <span class="lab-blade"></span>
+            <span class="lab-knob"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4"/></svg></span>
+            <span class="cl a">Sketch</span><span class="cl b">Render</span>
+            <button class="lab-expand" data-lb data-lb-src="../img/showcase/ai2_car_render.jpg" data-lb-title="Night Aero" data-lb-note="Charcoal hypercar, gold pinstripe, teal underglow" aria-label="Open Night Aero render full screen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></button>
+          </div>
+          <figcaption class="lab-cap"><span class="no">FR 13</span><div><h3>Night Aero</h3><p>A charcoal hypercar detail: gold pinstripe aero, teal underglow.</p></div></figcaption>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEQ 03 / BRAND -->
+  <section class="sec lab-sec" id="brand">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="eyebrow reveal">SEQ 03 &middot; 00:02:08:04 / Brand and Identity</div>
+          <h2 class="split-h">Identity you can <span class="it">hold</span></h2>
+          <p class="aside reveal">One geometric language carried from foil-stamped stationery to architectural signage.</p>
+        </div>
+      </div>
+      <div class="lab-board">
+        <figure class="lab-frame s12 reveal" data-lb data-lb-src="../img/showcase/brand_identity_signage_1784030105586.jpg" data-lb-title="Architectural Signage" data-lb-note="Identity carried into raw concrete">
+          <div class="lab-media r167">
+            <picture><source srcset="../img/showcase/brand_identity_signage_1784030105586.avif" type="image/avif" /><img src="../img/showcase/brand_identity_signage_1784030105586.jpg" alt="Architectural brand signage integrated with a concrete facade" loading="lazy" decoding="async" /></picture>
+            <span class="lab-chip tag">Concept</span><span class="lab-chip tc">TC 00:02:10:00</span>
+          </div>
+          <figcaption class="lab-cap"><span class="no">FR 14</span><div><h3>Architectural Signage</h3><p>The monogram at building scale, set into raw concrete.</p></div></figcaption>
+        </figure>
+        <figure class="lab-frame s6 reveal" data-lb data-lb-src="../img/showcase/brand_identity_monolith_1784029340397.jpg" data-lb-title="The Monolith Card" data-lb-note="Gold foil and blind deboss on heavyweight black stock">
+          <div class="lab-media">
+            <picture><source srcset="../img/showcase/brand_identity_monolith_1784029340397.avif" type="image/avif" /><img src="../img/showcase/brand_identity_monolith_1784029340397.jpg" alt="Gold-foil monogram business card with blind deboss on black stock" loading="lazy" decoding="async" /></picture>
+            <span class="lab-chip tag">Concept</span><span class="lab-chip tc">TC 00:02:18:12</span>
+          </div>
+          <figcaption class="lab-cap"><span class="no">FR 15</span><div><h3>The Monolith Card</h3><p>Gold foil, blind deboss, heavyweight black stock on raw stone.</p></div></figcaption>
+        </figure>
+        <figure class="lab-frame s6 drop reveal" data-lb data-lb-src="../img/showcase/brand_identity_system_1784029351135.jpg" data-lb-title="The System" data-lb-note="Cards, letterhead, packaging, seals: one language">
+          <div class="lab-media">
+            <picture><source srcset="../img/showcase/brand_identity_system_1784029351135.avif" type="image/avif" /><img src="../img/showcase/brand_identity_system_1784029351135.jpg" alt="Full stationery identity system flat lay" loading="lazy" decoding="async" /></picture>
+            <span class="lab-chip tag">Concept</span><span class="lab-chip tc">TC 00:02:26:00</span>
+          </div>
+          <figcaption class="lab-cap"><span class="no">FR 16</span><div><h3>The System</h3><p>Cards, letterhead, packaging, and seals held to one geometry.</p></div></figcaption>
+        </figure>
+        <figure class="lab-frame s6 reveal" data-lb data-lb-src="../img/showcase/brand2_packaging.jpg" data-lb-title="The Unboxing" data-lb-note="Rigid box, gold-foil monogram, wax-sealed card">
+          <div class="lab-media">
+            <picture><source srcset="../img/showcase/brand2_packaging.avif" type="image/avif" /><img src="../img/showcase/brand2_packaging.jpg" alt="Luxury unboxing flat lay with gold-foil monogram box and wax-sealed card" loading="lazy" decoding="async" /></picture>
+            <span class="lab-chip tag">Concept</span><span class="lab-chip tc">TC 00:02:33:16</span>
+          </div>
+          <figcaption class="lab-cap"><span class="no">FR 17</span><div><h3>The Unboxing</h3><p>A matte rigid box, tissue with a repeating mark, one wax seal.</p></div></figcaption>
+        </figure>
+        <figure class="lab-frame s6 drop reveal" data-lb data-lb-src="../img/showcase/brand2_menu.jpg" data-lb-title="Table Collateral" data-lb-note="Fine-dining menu and matchbox set in gold foil">
+          <div class="lab-media">
+            <picture><source srcset="../img/showcase/brand2_menu.avif" type="image/avif" /><img src="../img/showcase/brand2_menu.jpg" alt="Fine-dining menu and matchbox set in gold foil on black stock" loading="lazy" decoding="async" /></picture>
+            <span class="lab-chip tag">Concept</span><span class="lab-chip tc">TC 00:02:41:08</span>
+          </div>
+          <figcaption class="lab-cap"><span class="no">FR 18</span><div><h3>Table Collateral</h3><p>Menu and matches in gold foil, raking light on paper tooth.</p></div></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEQ 04 / MOBILE -->
+  <section class="sec lab-sec" id="mobile">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="eyebrow reveal">SEQ 04 &middot; 00:02:47:16 / Mobile Apps</div>
+          <h2 class="split-h">Products with a <span class="it">pulse</span></h2>
+          <p class="aside reveal">Bilingual, RTL-native product design: wealth, fitness, and travel in glass and charcoal.</p>
+        </div>
+      </div>
+      <div class="lab-board">
+        <figure class="lab-frame s7 reveal" data-lb data-lb-src="../img/showcase/mobile_app_concierge_1784029296414.jpg" data-lb-title="Aura Wealth" data-lb-note="Private-wealth dashboard, bilingual, dark-mode native">
+          <div class="lab-media r43">
+            <picture><source srcset="../img/showcase/mobile_app_concierge_1784029296414.avif" type="image/avif" /><img src="../img/showcase/mobile_app_concierge_1784029296414.jpg" alt="Bilingual private wealth app dashboard with teal charts" loading="lazy" decoding="async" /></picture>
+            <span class="lab-chip tag">Concept</span><span class="lab-chip tc">TC 00:02:49:00</span>
+          </div>
+          <figcaption class="lab-cap"><span class="no">FR 19</span><div><h3>Aura Wealth</h3><p>A private-wealth dashboard, bilingual and dark-mode native.</p></div></figcaption>
+        </figure>
+        <figure class="lab-frame s5 drop reveal" data-lb data-lb-src="../img/showcase/mobile_app_companion_1784030084775.jpg" data-lb-title="Hardware Companion" data-lb-note="Biometric entry, real-time portfolio">
+          <div class="lab-media">
+            <picture><source srcset="../img/showcase/mobile_app_companion_1784030084775.avif" type="image/avif" /><img src="../img/showcase/mobile_app_companion_1784030084775.jpg" alt="Mobile app shown alongside hardware integration" loading="lazy" decoding="async" /></picture>
+            <span class="lab-chip tag">Concept</span><span class="lab-chip tc">TC 00:02:57:12</span>
+          </div>
+          <figcaption class="lab-cap"><span class="no">FR 20</span><div><h3>Hardware Companion</h3><p>Biometric entry and live analytics bridging device and app.</p></div></figcaption>
+        </figure>
+        <figure class="lab-frame s4 reveal" data-lb data-lb-src="../img/showcase/mobile_app_ar_1784029308326.jpg" data-lb-title="Arabic-First UI" data-lb-note="RTL designed, never retrofitted">
+          <div class="lab-media">
+            <picture><source srcset="../img/showcase/mobile_app_ar_1784029308326.avif" type="image/avif" /><img src="../img/showcase/mobile_app_ar_1784029308326.jpg" alt="Arabic-first mobile app interface" loading="lazy" decoding="async" /></picture>
+            <span class="lab-chip tag">Concept</span><span class="lab-chip tc">TC 00:03:05:00</span>
+          </div>
+          <figcaption class="lab-cap"><span class="no">FR 21</span><div><h3>Arabic-First UI</h3><p>Right-to-left designed from frame one, never retrofitted.</p></div></figcaption>
+        </figure>
+        <figure class="lab-frame s4 drop reveal" data-lb data-lb-src="../img/showcase/mobile2_fitness.jpg" data-lb-title="Pulse" data-lb-note="Dark luxury fitness app concept">
+          <div class="lab-media">
+            <picture><source srcset="../img/showcase/mobile2_fitness.avif" type="image/avif" /><img src="../img/showcase/mobile2_fitness.jpg" alt="Dark luxury fitness app with teal activity rings on two phones" loading="lazy" decoding="async" /></picture>
+            <span class="lab-chip tag">Concept</span><span class="lab-chip tc">TC 00:03:13:12</span>
+          </div>
+          <figcaption class="lab-cap"><span class="no">FR 22</span><div><h3>Pulse</h3><p>Teal activity rings on charcoal glass, gold accents.</p></div></figcaption>
+        </figure>
+        <figure class="lab-frame s4 reveal" data-lb data-lb-src="../img/showcase/mobile2_travel.jpg" data-lb-title="Voyage" data-lb-note="Premium travel app concept">
+          <div class="lab-media">
+            <picture><source srcset="../img/showcase/mobile2_travel.avif" type="image/avif" /><img src="../img/showcase/mobile2_travel.jpg" alt="Premium travel app with gold routes on a dark map and frosted boarding pass" loading="lazy" decoding="async" /></picture>
+            <span class="lab-chip tag">Concept</span><span class="lab-chip tc">TC 00:03:21:00</span>
+          </div>
+          <figcaption class="lab-cap"><span class="no">FR 23</span><div><h3>Voyage</h3><p>Gold routes on a dark map, a boarding pass in frosted glass.</p></div></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEQ 05 / VIDEO -->
+  <section class="sec lab-sec" id="video">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="eyebrow reveal">SEQ 05 &middot; 00:03:31:08 / Cinematic Video</div>
+          <h2 class="split-h">The <span class="it">grade</span> makes the film</h2>
+          <p class="aside reveal">From the haze of the set to the glow of the suite: post-production as art direction.</p>
+        </div>
+      </div>
+      <div class="lab-board">
+        <figure class="lab-frame s12 reveal" data-lb data-lb-src="../img/showcase/video2_set.jpg" data-lb-title="On Set" data-lb-note="Tungsten fresnels, volumetric gold, an anamorphic flare">
+          <div class="lab-media r167">
+            <picture><source srcset="../img/showcase/video2_set.avif" type="image/avif" /><img src="../img/showcase/video2_set.jpg" alt="Cinema set at night with volumetric tungsten light beams and an ARRI camera on a dolly" loading="lazy" decoding="async" /></picture>
+            <span class="lab-chip tag">Concept</span><span class="lab-chip tc">TC 00:03:33:00</span>
+          </div>
+          <figcaption class="lab-cap"><span class="no">FR 24</span><div><h3>On Set</h3><p>Heavy atmosphere, tungsten beams, one anamorphic flare.</p></div></figcaption>
+        </figure>
+        <figure class="lab-frame s4 reveal" data-lb data-lb-src="../img/showcase/cinematic_video_post_1784029329181.jpg" data-lb-title="The Master Suite" data-lb-note="Chiaroscuro grade in a Kodak Vision3 palette">
+          <div class="lab-media">
+            <picture><source srcset="../img/showcase/cinematic_video_post_1784029329181.avif" type="image/avif" /><img src="../img/showcase/cinematic_video_post_1784029329181.jpg" alt="Cinematic color grading and post-production master suite" loading="lazy" decoding="async" /></picture>
+            <span class="lab-chip tag">Concept</span><span class="lab-chip tc">TC 00:03:41:12</span>
+          </div>
+          <figcaption class="lab-cap"><span class="no">FR 25</span><div><h3>The Master Suite</h3><p>A chiaroscuro grade in a Kodak Vision3 palette.</p></div></figcaption>
+        </figure>
+        <figure class="lab-frame s4 drop reveal" data-lb data-lb-src="../img/showcase/video2_grade.jpg" data-lb-title="The Grade, Three Ways" data-lb-note="One automotive shot, three looks">
+          <div class="lab-media">
+            <picture><source srcset="../img/showcase/video2_grade.avif" type="image/avif" /><img src="../img/showcase/video2_grade.jpg" alt="Colorist suite with one automotive shot shown in three different grades" loading="lazy" decoding="async" /></picture>
+            <span class="lab-chip tag">Concept</span><span class="lab-chip tc">TC 00:03:49:00</span>
+          </div>
+          <figcaption class="lab-cap"><span class="no">FR 26</span><div><h3>The Grade, Three Ways</h3><p>One shot, three looks, glowing trackballs in the dark.</p></div></figcaption>
+        </figure>
+        <figure class="lab-frame s4 reveal" data-lb data-lb-src="../img/showcase/video2_vfx.jpg" data-lb-title="Telemetry Pass" data-lb-note="Holographic teal UI over a car silhouette">
+          <div class="lab-media">
+            <picture><source srcset="../img/showcase/video2_vfx.avif" type="image/avif" /><img src="../img/showcase/video2_vfx.jpg" alt="3D motion graphics overlay with holographic teal telemetry on a car silhouette" loading="lazy" decoding="async" /></picture>
+            <span class="lab-chip tag">Concept</span><span class="lab-chip tc">TC 00:03:57:12</span>
+          </div>
+          <figcaption class="lab-cap"><span class="no">FR 27</span><div><h3>Telemetry Pass</h3><p>Holographic UI and gold data lines, feature-film compositing.</p></div></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEQ 06 / MARKETING -->
+  <section class="sec lab-sec" id="marketing">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="eyebrow reveal">SEQ 06 &middot; 00:04:12:20 / Digital Marketing</div>
+          <h2 class="split-h">Campaigns that <span class="it">take over</span></h2>
+          <p class="aside reveal">Social, email, and out-of-home treated as one connected story.</p>
+        </div>
+      </div>
+      <div class="lab-board">
+        <figure class="lab-frame s12 reveal" data-lb data-lb-src="../img/showcase/market2_billboard.jpg" data-lb-title="The Urban Takeover" data-lb-note="DOOH campaign on a rain-slicked street">
+          <div class="lab-media r167">
+            <picture><source srcset="../img/showcase/market2_billboard.avif" type="image/avif" /><img src="../img/showcase/market2_billboard.jpg" alt="Giant digital billboard glowing over a rain-slicked city street at night" loading="lazy" decoding="async" /></picture>
+            <span class="lab-chip tag">Concept</span><span class="lab-chip tc">TC 00:04:14:00</span>
+          </div>
+          <figcaption class="lab-cap"><span class="no">FR 28</span><div><h3>The Urban Takeover</h3><p>DOOH at night, the campaign reflected on wet asphalt.</p></div></figcaption>
+        </figure>
+        <figure class="lab-frame s6 reveal" data-lb data-lb-src="../img/showcase/digital_marketing_omni_1784029398755.jpg" data-lb-title="Omni-Channel Grid" data-lb-note="Social, DOOH, and analytics as one digital magazine">
+          <div class="lab-media r43">
+            <picture><source srcset="../img/showcase/digital_marketing_omni_1784029398755.avif" type="image/avif" /><img src="../img/showcase/digital_marketing_omni_1784029398755.jpg" alt="Omni-channel campaign analytics across tablet, phone, and watch" loading="lazy" decoding="async" /></picture>
+            <span class="lab-chip tag">Concept</span><span class="lab-chip tc">TC 00:04:22:12</span>
+          </div>
+          <figcaption class="lab-cap"><span class="no">FR 29</span><div><h3>Omni-Channel Grid</h3><p>A campaign system that reads like a digital magazine.</p></div></figcaption>
+        </figure>
+        <figure class="lab-frame s6 reveal" data-lb data-lb-src="../img/showcase/digital_marketing_editorial_1784029408900.jpg" data-lb-title="Editorial Newsletter" data-lb-note="Email designed like a magazine spread">
+          <div class="lab-media r43">
+            <picture><source srcset="../img/showcase/digital_marketing_editorial_1784029408900.avif" type="image/avif" /><img src="../img/showcase/digital_marketing_editorial_1784029408900.jpg" alt="Editorial email newsletter design concept" loading="lazy" decoding="async" /></picture>
+            <span class="lab-chip tag">Concept</span><span class="lab-chip tc">TC 00:04:30:00</span>
+          </div>
+          <figcaption class="lab-cap"><span class="no">FR 30</span><div><h3>Editorial Newsletter</h3><p>Email as editorial: gold calls-to-action on dark slate.</p></div></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta" id="contact">
+    <div class="wrap">
+      <div class="eyebrow reveal" style="justify-content:center;display:flex;margin-bottom:28px;">00:04:59 / Next frame</div>
+      <h2 class="reveal-text">This is the <span class="it">floor</span>, not the ceiling.</h2>
+      <p class="sub reveal">Tell us where the brand is headed. We will show you what the next frame looks like.</p>
+      <div class="row reveal">
+        <a href="https://calendly.com/keyframeglobal/30min" target="_blank" rel="noopener" class="btn btn-primary magnetic"><span class="dot"></span>Book a discovery call</a>
+        <a href="../#contact" class="btn btn-ghost magnetic">Send us a brief</a>
+        <a href="../pricing/" class="btn btn-ghost magnetic">See pricing</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="lab-endpad"></div>
+
+</div><!-- /shell -->
+
+<!-- TIMELINE DOCK -->
+<nav class="lab-dock" id="labDock" aria-label="Showcase timeline">
+  <div class="lab-track" aria-hidden="true"><span class="fill" id="labFill"></span><span class="head" id="labHead"></span></div>
+  <div class="lab-marks">
+    <button class="lab-mark" data-seq="web"><span class="d"></span><span class="lbl-f">01 Web</span><span class="lbl-s">Web</span></button>
+    <button class="lab-mark" data-seq="ai"><span class="d"></span><span class="lbl-f">02 AI Lab</span><span class="lbl-s">AI</span></button>
+    <button class="lab-mark" data-seq="brand"><span class="d"></span><span class="lbl-f">03 Brand</span><span class="lbl-s">Brand</span></button>
+    <button class="lab-mark" data-seq="mobile"><span class="d"></span><span class="lbl-f">04 Mobile</span><span class="lbl-s">Apps</span></button>
+    <button class="lab-mark" data-seq="video"><span class="d"></span><span class="lbl-f">05 Film</span><span class="lbl-s">Film</span></button>
+    <button class="lab-mark" data-seq="marketing"><span class="d"></span><span class="lbl-f">06 Campaigns</span><span class="lbl-s">Ads</span></button>
+  </div>
+</nav>
+
+<!-- LIGHTBOX -->
+<div class="lab-lb" id="labLb" role="dialog" aria-modal="true" aria-label="Image viewer" aria-hidden="true">
+  <button class="x" id="labLbX" aria-label="Close viewer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+  <button class="pv" id="labLbPv" aria-label="Previous frame"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+  <img id="labLbImg" src="" alt="" />
+  <div class="bar">
+    <span class="t" id="labLbT"></span>
+    <span class="n" id="labLbN"></span>
+    <span class="c" id="labLbC"></span>
+  </div>
+  <button class="nx" id="labLbNx" aria-label="Next frame"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+
+<!-- CINEMATIC CURTAIN FOOTER -->
+<div class="curtain">
+  <footer class="cine">
+    <div class="cine-aurora"></div>
+    <div class="cine-grid"></div>
+    <div class="cine-giant" id="cineGiant">KEYFRAME</div>
+
+    <div class="cine-marquee">
+      <div class="run">
+        <span>Strategy in Motion <i>&#10022;</i></span><span>Cinematic Web <i>&#10022;</i></span><span>Brand Film <i>&#10022;</i></span><span>Digital Branding <i>&#10022;</i></span><span>Amman . Dubai . Riyadh . Doha . New York <i>&#10022;</i></span>
+        <span>Strategy in Motion <i>&#10022;</i></span><span>Cinematic Web <i>&#10022;</i></span><span>Brand Film <i>&#10022;</i></span><span>Digital Branding <i>&#10022;</i></span><span>Amman . Dubai . Riyadh . Doha . New York <i>&#10022;</i></span>
+      </div>
+    </div>
+
+    <div class="cine-center">
+      <h2>Ready to <span class="it">begin?</span></h2>
+      <div class="pills">
+        <div class="pill-row">
+          <a href="../#contact" class="pill magnetic"><span class="dot" style="width:7px;height:7px;border-radius:50%;background:var(--accent);"></span>Start a project</a>
+          <a href="../work/" class="pill magnetic">View the reel</a>
+        </div>
+        <div class="pill-row">
+          <a href="../services/" class="pill sm magnetic">Services</a>
+          <a href="../work/" class="pill sm magnetic">Work</a>
+          <a href="../showcase/" class="pill sm magnetic">Showcase</a>
+          <a href="../pricing/" class="pill sm magnetic">Pricing</a>
+          <a href="../insights/" class="pill sm magnetic">Insights</a>
+        </div>
+        <div class="pill-row">
+          <a href="../jordan/" class="pill sm magnetic">Jordan</a>
+          <a href="../dubai/" class="pill sm magnetic">Dubai</a>
+          <a href="../doha/" class="pill sm magnetic">Doha</a>
+        </div>
+      </div>
+      <div class="cine-contact-info" style="display:flex; flex-wrap:wrap; gap:15px; justify-content:center; margin-top:30px; font-size:14px; opacity:0.8; font-weight:400; max-width: 800px; padding: 0 20px;">
+        <a href="tel:+962791656555" class="magnetic" style="color:var(--fg); text-decoration:none; display:flex; align-items:center; gap:5px;"><span style="opacity:0.5;">JO</span> +962 791 656 555</a>
+        <span style="opacity:0.3">|</span>
+        <a href="tel:+97455962969" class="magnetic" style="color:var(--fg); text-decoration:none; display:flex; align-items:center; gap:5px;"><span style="opacity:0.5;">QA</span> +974 559 629 69</a>
+        <span style="opacity:0.3">|</span>
+        <a href="https://wa.me/97455962969" target="_blank" class="magnetic" style="color:var(--fg); text-decoration:none;">WhatsApp</a>
+        <span style="opacity:0.3">|</span>
+        <a href="mailto:yousef@keyframeglobal.com" class="magnetic" style="color:var(--fg); text-decoration:none;">yousef@keyframeglobal.com</a>
+        <span style="opacity:0.3">|</span>
+        <a href="https://linkedin.com/company/keyframe-global" target="_blank" class="magnetic" style="color:var(--fg); text-decoration:none;">LinkedIn</a>
+      </div>
+    </div>
+
+    <div class="cine-bottom">
+      <div class="cr">&copy; 2026 Keyframe Global. Strategy in Motion.</div>
+      <div class="cine-badge">Crafted with <span class="hb">&#10084;</span> by <b>Keyframe Global</b></div>
+      <button class="totop magnetic" id="toTop" aria-label="Back to top">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 10l7-7 7 7M12 3v18" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+  </footer>
+</div>
+
+<script>
+/* ============ Concept Lab interactions ============ */
+(function () {
+  "use strict";
+  var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ---- timeline dock ---- */
+  var dock = document.getElementById("labDock");
+  var fill = document.getElementById("labFill");
+  var head = document.getElementById("labHead");
+  var marks = Array.prototype.slice.call(document.querySelectorAll(".lab-mark"));
+  var sections = marks.map(function (m) { return document.getElementById(m.getAttribute("data-seq")); });
+
+  /* Dock jumps fly past the one-shot heading reveals, so replay the
+     target section's title on arrival; otherwise it lands already played. */
+  function replaySeqTitle(s) {
+    if (reduced || window.__KF_LITE) return;
+    if (typeof gsap === "undefined" || typeof SplitType === "undefined") return;
+    var h = s.querySelector(".split-h");
+    if (!h || h.__kfReplaying) return;
+    if (h.querySelector(".word")) return; /* initial reveal still pending; it plays on its own */
+    h.__kfReplaying = true;
+    var split = new SplitType(h, { types: "lines, words", tagName: "span" });
+    if (!split.words || !split.words.length) { h.__kfReplaying = false; return; }
+    gsap.fromTo(split.words, { yPercent: 115 }, {
+      yPercent: 0, duration: 1.05, stagger: 0.04, ease: "power4.out", delay: 0.4,
+      onComplete: function () { split.revert(); h.__kfReplaying = false; }
+    });
+  }
+
+  marks.forEach(function (m, i) {
+    m.addEventListener("click", function () {
+      var s = sections[i];
+      if (!s) return;
+      s.scrollIntoView({ behavior: reduced ? "auto" : "smooth", block: "start" });
+      replaySeqTitle(s);
+    });
+  });
+
+  var ticking = false;
+  function onScroll() {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(function () {
+      ticking = false;
+      var doc = document.documentElement;
+      var max = doc.scrollHeight - window.innerHeight;
+      var p = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
+      var pct = (p * 100).toFixed(2) + "%";
+      fill.style.width = pct;
+      head.style.left = pct;
+      /* active sequence */
+      var mid = window.scrollY + window.innerHeight * 0.42;
+      var idx = -1;
+      sections.forEach(function (s, i) { if (s && s.offsetTop <= mid) idx = i; });
+      marks.forEach(function (m, i) { m.classList.toggle("on", i === idx); });
+      /* parallax on live-client features */
+      if (!reduced && !window.__KF_LITE) {
+        pars.forEach(function (el) {
+          var r = el.getBoundingClientRect();
+          if (r.bottom < 0 || r.top > window.innerHeight) return;
+          var prog = (r.top + r.height / 2 - window.innerHeight / 2) / (window.innerHeight / 2 + r.height / 2);
+          var img = el.querySelector("img");
+          if (img) img.style.transform = "scale(1.12) translateY(" + (prog * -3.2).toFixed(2) + "%)";
+        });
+      }
+    });
+  }
+  var pars = Array.prototype.slice.call(document.querySelectorAll(".lab-par"));
+  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", onScroll, { passive: true });
+  onScroll();
+
+  /* hide the dock while the curtain footer is on screen */
+  var curtain = document.querySelector(".curtain");
+  if (curtain && "IntersectionObserver" in window) {
+    new IntersectionObserver(function (entries) {
+      dock.classList.toggle("is-hidden", entries[0].isIntersecting);
+    }, { threshold: 0.08 }).observe(curtain);
+  }
+
+  /* ---- compare sliders ---- */
+  Array.prototype.slice.call(document.querySelectorAll(".lab-compare")).forEach(function (c) {
+    var dragging = false;
+    function setX(clientX) {
+      var r = c.getBoundingClientRect();
+      var x = ((clientX - r.left) / r.width) * 100;
+      x = Math.max(4, Math.min(96, x));
+      c.style.setProperty("--x", x.toFixed(2) + "%");
+      c.setAttribute("aria-valuenow", Math.round(x));
+    }
+    c.addEventListener("pointerdown", function (e) {
+      if (e.target.closest(".lab-expand")) return;
+      dragging = true;
+      c.setPointerCapture(e.pointerId);
+      setX(e.clientX);
+    });
+    c.addEventListener("pointermove", function (e) { if (dragging) setX(e.clientX); });
+    c.addEventListener("pointerup", function () { dragging = false; });
+    c.addEventListener("pointercancel", function () { dragging = false; });
+    c.addEventListener("keydown", function (e) {
+      var cur = parseFloat(getComputedStyle(c).getPropertyValue("--x")) || 62;
+      if (e.key === "ArrowLeft") { c.style.setProperty("--x", Math.max(4, cur - 5) + "%"); e.preventDefault(); }
+      if (e.key === "ArrowRight") { c.style.setProperty("--x", Math.min(96, cur + 5) + "%"); e.preventDefault(); }
+    });
+  });
+
+  /* one-time hint sweep when the first slider scrolls into view */
+  var firstC = document.querySelector(".lab-compare");
+  if (firstC && "IntersectionObserver" in window && !reduced) {
+    var swept = false;
+    new IntersectionObserver(function (entries, obs) {
+      if (!entries[0].isIntersecting || swept) return;
+      swept = true; obs.disconnect();
+      var t0 = null;
+      function sweep(ts) {
+        if (!t0) t0 = ts;
+        var k = Math.min(1, (ts - t0) / 1200);
+        var x = 62 + Math.sin(k * Math.PI) * -22; /* 62 -> 40 -> 62 */
+        firstC.style.setProperty("--x", x.toFixed(2) + "%");
+        if (k < 1) requestAnimationFrame(sweep);
+      }
+      requestAnimationFrame(sweep);
+    }, { threshold: 0.5 }).observe(firstC);
+  }
+
+  /* ---- lightbox ---- */
+  var lb = document.getElementById("labLb");
+  var lbImg = document.getElementById("labLbImg");
+  var lbT = document.getElementById("labLbT");
+  var lbN = document.getElementById("labLbN");
+  var lbC = document.getElementById("labLbC");
+  var items = Array.prototype.slice.call(document.querySelectorAll("[data-lb]"));
+  var cur = 0;
+
+  function show(i) {
+    cur = (i + items.length) % items.length;
+    var el = items[cur];
+    lbImg.src = el.getAttribute("data-lb-src");
+    lbImg.alt = el.getAttribute("data-lb-title") || "";
+    lbT.textContent = el.getAttribute("data-lb-title") || "";
+    lbN.textContent = el.getAttribute("data-lb-note") || "";
+    lbC.textContent = "FRAME " + String(cur + 1).padStart(2, "0") + " / " + String(items.length).padStart(2, "0");
+  }
+  function open(i) {
+    show(i);
+    lb.classList.add("open");
+    lb.setAttribute("aria-hidden", "false");
+    document.documentElement.classList.add("lab-noscroll");
+  }
+  function close() {
+    lb.classList.remove("open");
+    lb.setAttribute("aria-hidden", "true");
+    document.documentElement.classList.remove("lab-noscroll");
+  }
+  items.forEach(function (el, i) {
+    el.addEventListener("click", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      open(i);
+    });
+  });
+  document.getElementById("labLbX").addEventListener("click", close);
+  document.getElementById("labLbPv").addEventListener("click", function (e) { e.stopPropagation(); show(cur - 1); });
+  document.getElementById("labLbNx").addEventListener("click", function (e) { e.stopPropagation(); show(cur + 1); });
+  lb.addEventListener("click", function (e) { if (e.target === lb || e.target === lbImg) close(); });
+  document.addEventListener("keydown", function (e) {
+    if (!lb.classList.contains("open")) return;
+    if (e.key === "Escape") close();
+    if (e.key === "ArrowLeft") show(cur - 1);
+    if (e.key === "ArrowRight") show(cur + 1);
+  });
+})();
+</script>
+
+<script defer src="../js/site-pre.min.js?v=20260721"></script>
+  <script defer src="../js/vendor/gsap.min.js"></script>
+  <script defer src="../js/vendor/ScrollTrigger.min.js"></script>
+  <script defer src="../js/vendor/split-type.min.js"></script>
+  <script defer src="../js/vendor/lenis.min.js"></script>
+<script defer src="../js/site.min.js?v=20260721"></script>
+
+
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/97455962969?text=Hi%20Keyframe%2C%20I%27d%20like%20to%20talk%20about%20a%20project." target="_blank" rel="noopener" class="wa-float" aria-label="Chat with Keyframe Global on WhatsApp">
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.04 3C9.4 3 4 8.36 4 14.96c0 2.11.56 4.16 1.62 5.97L4 29l8.28-2.16a12.1 12.1 0 0 0 3.76.6h.01c6.63 0 12.03-5.36 12.03-11.96C28.08 8.36 22.67 3 16.04 3zm0 21.9h-.01c-1.8 0-3.56-.48-5.09-1.38l-.37-.22-4.91 1.28 1.31-4.77-.24-.39a9.86 9.86 0 0 1-1.52-5.26c0-5.46 4.48-9.9 9.99-9.9 2.67 0 5.18 1.03 7.07 2.9a9.79 9.79 0 0 1 2.93 7.01c0 5.46-4.48 9.9-9.99 9.9zm5.48-7.41c-.3-.15-1.77-.87-2.05-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.41-1.48-.89-.79-1.49-1.76-1.66-2.06-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.05 1.02-1.05 2.5 0 1.47 1.08 2.9 1.23 3.1.15.2 2.12 3.22 5.14 4.52.72.31 1.28.49 1.72.63.72.23 1.37.2 1.89.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35z"/></svg>
+</a>
+
+</body>
+</html>

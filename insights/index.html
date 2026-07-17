@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en" class="js" data-theme="dark">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Insights & FAQ | Keyframe Global</title>
+<meta name="description" content="Global search intent in web design & marketing across the US, GCC, and Jordan. Read our insights and FAQ." />
+<meta name="keywords" content="creative agency, cinematic web design, video production, brand identity, digital branding, Amman, Dubai, Riyadh, Doha, Jordan, GCC, USA" />
+<meta name="author" content="Yousef Balawi, Keyframe Global" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+<link rel="canonical" href="https://keyframeglobal.com/insights/" />
+<link rel="icon" type="image/png" href="../keyframe-favicon.png" />
+<link rel="apple-touch-icon" href="../keyframe-favicon.png" />
+<link rel="prefetch" href="../" as="document" /><!-- warm the home page for instant navigation -->
+<meta name="color-scheme" content="dark light" />
+<meta name="theme-color" content="#08080A" id="metaThemeColor" />
+<script>
+(function () {
+  try {
+    var t = localStorage.getItem("theme");
+    if (!t) t = "dark";                 /* dark is the brand default, regardless of the OS setting */
+    var r = document.documentElement;
+    r.setAttribute("data-theme", t);
+    r.style.colorScheme = t;          /* paint the correct canvas immediately, no white flash between pages */
+    r.style.background = t === "light" ? "#F4F1EA" : "#08080A";
+  } catch (e) { /* private mode */ }
+})();
+</script>
+
+<script>
+/* Lite mode: skip the heavy animation stack on constrained devices */
+(function () {
+  try {
+    var c = navigator.connection || {};
+    var lite = c.saveData === true ||
+               /(^|-)2g/.test(c.effectiveType || "") ||
+               (navigator.deviceMemory && navigator.deviceMemory < 4) ||
+               (navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 3);
+    if (lite) {
+      window.__KF_LITE = true;
+      document.documentElement.classList.add("kf-lite");
+    }
+  } catch (e) {}
+})();
+</script>
+
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Keyframe Global | Strategy in Motion" />
+<meta property="og:description" content="High-end cinematic web design, brand film, and digital branding for ambitious companies across Jordan, the GCC, and the United States." />
+<meta property="og:url" content="https://keyframeglobal.com/insights/" />
+<meta property="og:image" content="https://keyframeglobal.com/og-image.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Keyframe Global | Strategy in Motion" />
+<meta name="twitter:description" content="High-end cinematic web design, brand film, and digital branding across Jordan, the GCC, and the United States." />
+<meta name="twitter:image" content="https://keyframeglobal.com/og-image.jpg" />
+
+<link rel="preload" href="../fonts/fraunces-300-900.woff2" as="font" type="font/woff2" crossorigin />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Keyframe Global",
+  "url": "https://keyframeglobal.com/",
+  "logo": "https://keyframeglobal.com/keyframe-favicon.png",
+  "image": "https://keyframeglobal.com/og-image.jpg",
+  "slogan": "Strategy in Motion",
+  "description": "High-end cinematic website design, brand film and video production, and digital branding studio serving Jordan, the GCC, and the United States.",
+  "founder": { "@type": "Person", "name": "Yousef Balawi", "jobTitle": "Founder and Creative Director" },
+  "areaServed": ["Jordan", "United Arab Emirates", "Saudi Arabia", "Qatar", "United States"],
+  "knowsAbout": ["Web Design", "Video Production", "Brand Identity", "3D Visualization", "Motion Design"],
+  "makesOffer": [
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Web Experiences" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cinematic Video" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Brand and Identity" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI and Visualization" } }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Will I own the website, domain, and source files after launch?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We believe in complete data transparency and legal ownership. You will have full control of your digital assets, intellectual property, and domain after launch, with no vendor lock-in."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you track and show leads from your campaigns?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We provide transparent reporting through Google Analytics integration and custom dashboards, so you see clear ROI metrics and lead tracking from every campaign we run."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you provide bilingual (Arabic and English) web design and SEO?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. We specialize in flawless bilingual builds, delivering both Arabic (right-to-left) and English (left-to-right) layouts and SEO so you can compete across the GCC and international markets."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you build custom websites or use templates?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We build fully custom websites on modern stacks like React and Next.js. Custom development means your platform stands out and performs significantly better than generic page builders."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does your web design include social media management?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We offer full-service digital marketing and manage your website and social presence (such as Instagram and Facebook) as one unified ecosystem to maximize local visibility and engagement."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does a website or brand project take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most projects run on a clear, milestone-based timeline from discovery to launch. A focused marketing site typically takes 3 to 6 weeks, while a full brand and cinematic web build runs longer. We lock scope and dates up front so there is no drift."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which regions and time zones do you work with?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We work with ambitious companies across Jordan, the GCC (UAE, Saudi Arabia, Qatar), and the United States, and coordinate delivery across Amman, Dubai, Riyadh, Doha, and New York time zones."
+      }
+    }
+  ]
+}
+</script>
+
+<link rel="stylesheet" href="../css/main.min.css?v=20260730" />
+<noscript>
+<style>
+  .reveal, .split-h, .reveal-text { opacity: 1 !important; transform: none !important; }
+  #loader, #playhead { display: none !important; }
+  body { cursor: auto; }
+</style>
+</noscript>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FWQNN3VRZJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-FWQNN3VRZJ');
+</script>
+</head>
+<body>
+
+
+<div id="playhead" aria-hidden="true"></div>
+
+<canvas id="field"></canvas>
+<div class="atmos-grid" aria-hidden="true"></div>
+<div class="atmos-grain" aria-hidden="true"></div>
+<div class="cursor-ring" aria-hidden="true"><span class="cursor-label"></span></div>
+<div class="cursor-dot" aria-hidden="true"></div>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <a class="brand" href="../#top" aria-label="Keyframe Global home">
+    <img src="../logo-dark.png" alt="Keyframe Global" class="mark logo-dark" style="height: 28px; width: auto;" />
+    <img src="../keyframe_logo_black.png?v=2" alt="Keyframe Global" class="mark logo-light" style="height: 28px; width: auto;" />
+    <span class="tc" id="navtc">00:00:00:01</span>
+  </a>
+  <ul class="nav-links" aria-label="Primary">
+    <li style="--gradient-from: #EBB54E; --gradient-to: #D98A2E;" class="nav-item">
+      <a href="../#top">
+        <span class="nav-bg"></span><span class="nav-glow"></span>
+        <span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span>
+        <span class="nav-title">Home</span>
+      </a>
+    </li>
+    <li style="--gradient-from: #7CC4C0; --gradient-to: #4E9E99;" class="nav-item">
+      <a href="../#services">
+        <span class="nav-bg"></span><span class="nav-glow"></span>
+        <span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></span>
+        <span class="nav-title">Services</span>
+      </a>
+    </li>
+    <li style="--gradient-from: #EBB54E; --gradient-to: #7CC4C0;" class="nav-item">
+      <a href="../work/">
+        <span class="nav-bg"></span><span class="nav-glow"></span>
+        <span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></span>
+        <span class="nav-title">Work</span>
+      </a>
+    </li>
+    <li style="--gradient-from: #EBB54E; --gradient-to: #7CC4C0;" class="nav-item">
+      <a href="../showcase/">
+        <span class="nav-bg"></span><span class="nav-glow"></span>
+        <span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M7 4v16M17 4v16M2 9h5M2 15h5M17 9h5M17 15h5"/></svg></span>
+        <span class="nav-title">Showcase</span>
+      </a>
+    </li>
+    <li style="--gradient-from: #D98A2E; --gradient-to: #EBB54E;" class="nav-item">
+      <a href="../#method">
+        <span class="nav-bg"></span><span class="nav-glow"></span>
+        <span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg></span>
+        <span class="nav-title">Method</span>
+      </a>
+    </li>
+    <li style="--gradient-from: #4E9E99; --gradient-to: #7CC4C0;" class="nav-item">
+      <a href="../#voices">
+        <span class="nav-bg"></span><span class="nav-glow"></span>
+        <span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg></span>
+        <span class="nav-title">Studio</span>
+      </a>
+    </li>
+    <li style="--gradient-from: #EBB54E; --gradient-to: #E0654E;" class="nav-item">
+      <a href="#contact">
+        <span class="nav-bg"></span><span class="nav-glow"></span>
+        <span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
+        <span class="nav-title">Contact</span>
+      </a>
+    </li>
+    <li style="--gradient-from: #E0654E; --gradient-to: #EBB54E;" class="nav-item active" aria-current="page">
+      <a href="#">
+        <span class="nav-bg"></span><span class="nav-glow"></span>
+        <span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></span>
+        <span class="nav-title">Insights</span>
+      </a>
+    </li>
+  </ul>
+  <div class="nav-right">
+    <button class="theme-toggle" id="themeBtn" aria-label="Toggle light and dark theme">
+      <svg class="tt-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+      <svg class="tt-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="M4.93 4.93l1.41 1.41"/><path d="M17.66 17.66l1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="M6.34 17.66l-1.41 1.41"/><path d="M19.07 4.93l-1.41 1.41"/></svg>
+    </button>
+    <a href="#contact" class="btn btn-primary magnetic"><span class="dot"></span>Start a project</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <nav aria-label="Mobile">
+    <a class="mm-link" href="../#top" style="--i:0"><span class="no">01</span>Home</a>
+    <a class="mm-link" href="../#services" style="--i:1"><span class="no">02</span>Services</a>
+    <a class="mm-link" href="../work/" style="--i:2"><span class="no">03</span>Work</a>
+    <a class="mm-link" href="../showcase/" style="--i:3"><span class="no">04</span>Showcase</a>
+    <a class="mm-link" href="../#method" style="--i:4"><span class="no">05</span>Method</a>
+    <a class="mm-link" href="../#voices" style="--i:5"><span class="no">06</span>Studio</a>
+    <a class="mm-link" href="#contact" style="--i:6"><span class="no">07</span>Contact</a>
+    <a class="mm-link" href="#" style="--i:7"><span class="no">08</span>Insights</a>
+  </nav>
+  <div class="mm-foot">
+    <a href="mailto:yousef@keyframeglobal.com">yousef@keyframeglobal.com</a>
+    <a href="https://wa.me/97455962969" target="_blank" rel="noopener">WhatsApp +974 559 629 69</a>
+    <span>Amman . Dubai . Riyadh . Doha . New York</span>
+  </div>
+</div>
+
+<div class="shell" id="top">
+
+  <!-- BLOG HERO -->
+  <section class="hero" id="hero" style="min-height:auto; justify-content:flex-start; padding:150px 0 20px;">
+    <div class="wrap">
+      <div style="max-width: 860px;">
+        <div class="eyebrow reveal" style="margin-bottom:22px;">Insights / FAQ</div>
+
+        <div class="hero-title-container" id="heroPerspective" style="margin-bottom: 20px;">
+          <div class="hero-title-inner" id="heroCard">
+            <h1 class="hero-title reveal-text" style="font-size: clamp(2.3rem, 5.4vw, 4.6rem); line-height: 1.06;">
+              Web Design &amp; Marketing <br/><span class="highlight-pivotal">Questions</span>, <span class="blk">Answered</span>
+            </h1>
+          </div>
+        </div>
+
+        <p class="hero-sub reveal" style="margin-top: 22px; max-width: 660px;">
+          The questions clients across the US, the GCC, and Jordan actually ask before hiring an agency, answered straight. Search intent shifts by region, so we cover what each market wants to know and how our studio delivers it.
+        </p>
+
+        <div class="reveal" style="margin-top: 30px; display:flex; flex-wrap:wrap; gap:12px 18px; align-items:center; font-family:'IBM Plex Mono',monospace; font-size:0.72rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--fg-faint);">
+          <span style="color:var(--accent);">By Yousef Balawi</span>
+          <span style="opacity:0.35;">/</span>
+          <span>Founder &amp; Creative Director</span>
+          <span style="opacity:0.35;">/</span>
+          <span>Updated July 2026</span>
+          <span style="opacity:0.35;">/</span>
+          <span>6 min read</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ (primary) -->
+  <!-- ARTICLES -->
+  <section class="sec" id="articles" style="padding-top: 40px; padding-bottom: 20px;">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="split-h">Latest <span class="it">articles</span></h2>
+        <p class="aside reveal">Deeper dives into pricing, craft, and how to buy creative work in this region.</p>
+      </div>
+      <div class="kf-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+        <article class="glow-card reveal" style="min-height: 240px;">
+          <a class="card-link" href="website-cost-gcc-jordan/" aria-label="Read: How much does a website cost in the GCC and Jordan?" style="position:absolute; inset:0; z-index:3; border-radius:22px;"></a>
+          <div><span class="idx">PRICING / 2026 GUIDE</span>
+            <h3 style="font-size:1.4rem;">How much does a website cost in the GCC and Jordan?</h3>
+            <p>Real 2026 ranges from template builds to custom cinematic sites, and what actually drives the price.</p>
+          </div>
+          <div class="tags"><span>7 MIN READ</span></div>
+        </article>
+        <article class="glow-card reveal" style="min-height: 240px;">
+          <a class="card-link" href="cinematic-web-design/" aria-label="Read: What is cinematic web design and when does it pay off?" style="position:absolute; inset:0; z-index:3; border-radius:22px;"></a>
+          <div><span class="idx">CRAFT / EXPLAINER</span>
+            <h3 style="font-size:1.4rem;">What is cinematic web design, and when does it pay off?</h3>
+            <p>Scroll-driven storytelling explained, when it converts better than a standard site, and when it is the wrong choice.</p>
+          </div>
+          <div class="tags"><span>6 MIN READ</span></div>
+        </article>
+        <article class="glow-card reveal" style="min-height: 240px;">
+          <a class="card-link" href="choose-creative-agency-gcc/" aria-label="Read: How to choose a creative agency in the GCC" style="position:absolute; inset:0; z-index:3; border-radius:22px;"></a>
+          <div><span class="idx">BUYING GUIDE</span>
+            <h3 style="font-size:1.4rem;">How to choose a creative agency in the GCC.</h3>
+            <p>Nine questions that separate senior studios from resellers, plus regional notes for Qatar, KSA, UAE, and Jordan.</p>
+          </div>
+          <div class="tags"><span>6 MIN READ</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="faq" style="padding-top: 40px; padding-bottom: 100px;">
+    <div class="wrap" itemscope itemtype="https://schema.org/FAQPage">
+      <div class="sec-head">
+        <h2 class="split-h">Frequently asked <span class="it">questions</span></h2>
+        <p class="aside reveal">Straight answers to what clients ask most, from ownership and reporting to bilingual builds, timelines, and social. Tap any question to expand.</p>
+      </div>
+
+      <div class="faq-accordion" style="max-width: 820px; display: flex; flex-direction: column; gap: 16px;">
+
+        <details class="glow-card reveal" style="padding: 24px 32px; min-height: auto; cursor: pointer;" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <summary style="font-family: 'Fraunces', serif; font-size: 1.3rem; font-weight: 500; outline: none; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 20px;" itemprop="name">
+            Will I own the website, domain, and source files after launch?
+            <span style="color: var(--accent); font-size: 1.5rem; transition: transform 0.3s ease; flex: 0 0 auto;">+</span>
+          </summary>
+          <div style="margin-top: 16px; color: var(--fg-muted); line-height: 1.6; border-top: 1px solid var(--line); padding-top: 16px;" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <span itemprop="text">Yes. We believe in complete data transparency and legal ownership. You will have full control of your digital assets, intellectual property, and domain after launch, with no vendor lock-in.</span>
+          </div>
+        </details>
+
+        <details class="glow-card reveal" style="padding: 24px 32px; min-height: auto; cursor: pointer;" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <summary style="font-family: 'Fraunces', serif; font-size: 1.3rem; font-weight: 500; outline: none; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 20px;" itemprop="name">
+            How do you track and show leads from your campaigns?
+            <span style="color: var(--accent); font-size: 1.5rem; transition: transform 0.3s ease; flex: 0 0 auto;">+</span>
+          </summary>
+          <div style="margin-top: 16px; color: var(--fg-muted); line-height: 1.6; border-top: 1px solid var(--line); padding-top: 16px;" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <span itemprop="text">We provide transparent reporting through Google Analytics integration and custom dashboards, so you see clear ROI metrics and lead tracking from every campaign we run.</span>
+          </div>
+        </details>
+
+        <details class="glow-card reveal" style="padding: 24px 32px; min-height: auto; cursor: pointer;" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <summary style="font-family: 'Fraunces', serif; font-size: 1.3rem; font-weight: 500; outline: none; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 20px;" itemprop="name">
+            Can you provide bilingual (Arabic and English) web design and SEO?
+            <span style="color: var(--accent); font-size: 1.5rem; transition: transform 0.3s ease; flex: 0 0 auto;">+</span>
+          </summary>
+          <div style="margin-top: 16px; color: var(--fg-muted); line-height: 1.6; border-top: 1px solid var(--line); padding-top: 16px;" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <span itemprop="text">Absolutely. We specialize in flawless bilingual builds, delivering both Arabic (right-to-left) and English (left-to-right) layouts and SEO so you can compete across the GCC and international markets.</span>
+          </div>
+        </details>
+
+        <details class="glow-card reveal" style="padding: 24px 32px; min-height: auto; cursor: pointer;" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <summary style="font-family: 'Fraunces', serif; font-size: 1.3rem; font-weight: 500; outline: none; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 20px;" itemprop="name">
+            Do you build custom websites or use templates?
+            <span style="color: var(--accent); font-size: 1.5rem; transition: transform 0.3s ease; flex: 0 0 auto;">+</span>
+          </summary>
+          <div style="margin-top: 16px; color: var(--fg-muted); line-height: 1.6; border-top: 1px solid var(--line); padding-top: 16px;" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <span itemprop="text">We build fully custom websites on modern stacks like React and Next.js. Custom development means your platform stands out and performs significantly better than generic page builders.</span>
+          </div>
+        </details>
+
+        <details class="glow-card reveal" style="padding: 24px 32px; min-height: auto; cursor: pointer;" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <summary style="font-family: 'Fraunces', serif; font-size: 1.3rem; font-weight: 500; outline: none; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 20px;" itemprop="name">
+            Does your web design include social media management?
+            <span style="color: var(--accent); font-size: 1.5rem; transition: transform 0.3s ease; flex: 0 0 auto;">+</span>
+          </summary>
+          <div style="margin-top: 16px; color: var(--fg-muted); line-height: 1.6; border-top: 1px solid var(--line); padding-top: 16px;" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <span itemprop="text">Yes. We offer full-service digital marketing and manage your website and social presence (such as Instagram and Facebook) as one unified ecosystem to maximize local visibility and engagement.</span>
+          </div>
+        </details>
+
+        <details class="glow-card reveal" style="padding: 24px 32px; min-height: auto; cursor: pointer;" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <summary style="font-family: 'Fraunces', serif; font-size: 1.3rem; font-weight: 500; outline: none; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 20px;" itemprop="name">
+            How long does a website or brand project take?
+            <span style="color: var(--accent); font-size: 1.5rem; transition: transform 0.3s ease; flex: 0 0 auto;">+</span>
+          </summary>
+          <div style="margin-top: 16px; color: var(--fg-muted); line-height: 1.6; border-top: 1px solid var(--line); padding-top: 16px;" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <span itemprop="text">Most projects run on a clear, milestone-based timeline from discovery to launch. A focused marketing site typically takes 3 to 6 weeks, while a full brand and cinematic web build runs longer. We lock scope and dates up front so there is no drift.</span>
+          </div>
+        </details>
+
+        <details class="glow-card reveal" style="padding: 24px 32px; min-height: auto; cursor: pointer;" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <summary style="font-family: 'Fraunces', serif; font-size: 1.3rem; font-weight: 500; outline: none; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 20px;" itemprop="name">
+            Which regions and time zones do you work with?
+            <span style="color: var(--accent); font-size: 1.5rem; transition: transform 0.3s ease; flex: 0 0 auto;">+</span>
+          </summary>
+          <div style="margin-top: 16px; color: var(--fg-muted); line-height: 1.6; border-top: 1px solid var(--line); padding-top: 16px;" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <span itemprop="text">We work with ambitious companies across Jordan, the GCC (UAE, Saudi Arabia, Qatar), and the United States, and coordinate delivery across Amman, Dubai, Riyadh, Doha, and New York time zones.</span>
+          </div>
+        </details>
+
+      </div>
+    </div>
+
+    <style>
+      details.glow-card > summary::-webkit-details-marker { display: none; }
+      details.glow-card[open] > summary span { transform: rotate(45deg); display: inline-block; }
+    </style>
+  </section>
+
+  <!-- REGIONAL INSIGHT (supporting) -->
+  <section class="sec" style="background: color-mix(in oklch, var(--surface) 20%, transparent); border-top: 1px solid var(--line); padding-top: 90px; padding-bottom: 110px;">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="split-h">How priorities differ <span class="it">by region</span></h2>
+        <p class="aside reveal">The same questions, weighted differently. What clients emphasize across the US, the GCC, and Jordan, and what it means for your build.</p>
+      </div>
+
+      <div class="blog-content" style="max-width: 900px;">
+
+        <div class="glow-card reveal" style="padding: 40px; margin-bottom: 20px; min-height: auto;">
+          <div class="idx">01 / UNITED STATES</div>
+          <h3 style="font-family: 'Fraunces', serif; font-size: 1.7rem; margin: 12px 0 14px;">ROI, ownership, and strategy</h3>
+          <p style="color: var(--fg-muted); line-height: 1.6; margin-bottom: 18px;">US-based clients focus on data transparency, legal ownership, and long-term marketing strategy. They treat the website as a performance asset.</p>
+          <ul style="color: var(--fg-muted); line-height: 1.6; padding-left: 20px;">
+            <li style="margin-bottom: 8px;"><b>Full control &amp; IP:</b> wary of vendor lock-in, they want full ownership of digital assets.</li>
+            <li style="margin-bottom: 8px;"><b>Transparent reporting:</b> clear ROI metrics, lead tracking, and Google Analytics.</li>
+            <li style="margin-bottom: 8px;"><b>Custom development:</b> custom stacks (React, Next.js) over generic page builders.</li>
+            <li><b>Holistic strategy:</b> the site as the hub of inbound marketing, not an island.</li>
+          </ul>
+        </div>
+
+        <div class="glow-card reveal" style="padding: 40px; margin-bottom: 20px; min-height: auto;">
+          <div class="idx">02 / GCC (UAE, SAUDI ARABIA, QATAR)</div>
+          <h3 style="font-family: 'Fraunces', serif; font-size: 1.7rem; margin: 12px 0 14px;">Multilingual scale and e-commerce</h3>
+          <p style="color: var(--fg-muted); line-height: 1.6; margin-bottom: 18px;">The Gulf market is defined by rapid digital transformation, a diverse audience, and a booming e-commerce sector.</p>
+          <ul style="color: var(--fg-muted); line-height: 1.6; padding-left: 20px;">
+            <li style="margin-bottom: 8px;"><b>Bilingual capability:</b> flawless Arabic (RTL) and English (LTR) is non-negotiable.</li>
+            <li style="margin-bottom: 8px;"><b>All-in-one partners:</b> UI/UX, development, and performance marketing under one roof.</li>
+            <li style="margin-bottom: 8px;"><b>Scalable e-commerce:</b> robust stores with localized payment gateways.</li>
+            <li><b>Aggressive SEO:</b> a competitive market demands rapid, results-driven timelines.</li>
+          </ul>
+        </div>
+
+        <div class="glow-card reveal" style="padding: 40px; min-height: auto;">
+          <div class="idx">03 / JORDAN</div>
+          <h3 style="font-family: 'Fraunces', serif; font-size: 1.7rem; margin: 12px 0 14px;">Local visibility and social integration</h3>
+          <p style="color: var(--fg-muted); line-height: 1.6; margin-bottom: 18px;">In Jordan the market is relationship-driven. Search focuses on localized lead generation, cost-efficiency, and tight social integration.</p>
+          <ul style="color: var(--fg-muted); line-height: 1.6; padding-left: 20px;">
+            <li style="margin-bottom: 8px;"><b>Local SEO:</b> capturing local search that converts to leads or foot traffic in Amman.</li>
+            <li style="margin-bottom: 8px;"><b>Social ecosystem:</b> website and social (Instagram, Facebook) managed as one.</li>
+            <li style="margin-bottom: 8px;"><b>Social proof:</b> clients look for localized case studies before committing.</li>
+            <li><b>Cost-efficiency:</b> budget-aware searches for affordable, high-value solutions.</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta" id="contact">
+    <div class="wrap">
+      <div class="eyebrow reveal" style="justify-content:center;display:flex;margin-bottom:28px;">00:00:59 / Next frame</div>
+      <h2 class="reveal-text">Ready to <span class="it">scale</span> globally?</h2>
+      <p class="sub reveal">Let's craft a digital presence that dominates search intent in your target regions.</p>
+      <div class="row reveal">
+        <a href="https://calendly.com/keyframeglobal/30min" target="_blank" rel="noopener" class="btn btn-primary magnetic"><span class="dot"></span>Book a discovery call</a>
+        <a href="../#contact" class="btn btn-ghost magnetic">Send us a brief</a>
+        <a href="mailto:yousef@keyframeglobal.com" class="mail magnetic">yousef@keyframeglobal.com</a>
+      </div>
+    </div>
+  </section>
+
+</div><!-- /shell -->
+
+<!-- CINEMATIC CURTAIN FOOTER -->
+<div class="curtain">
+  <footer class="cine">
+    <div class="cine-aurora"></div>
+    <div class="cine-grid"></div>
+    <div class="cine-giant" id="cineGiant">KEYFRAME</div>
+
+    <div class="cine-marquee">
+      <div class="run">
+        <span>Strategy in Motion <i>&#10022;</i></span><span>Cinematic Web <i>&#10022;</i></span><span>Brand Film <i>&#10022;</i></span><span>Digital Branding <i>&#10022;</i></span><span>Amman . Dubai . Riyadh . Doha . New York <i>&#10022;</i></span>
+        <span>Strategy in Motion <i>&#10022;</i></span><span>Cinematic Web <i>&#10022;</i></span><span>Brand Film <i>&#10022;</i></span><span>Digital Branding <i>&#10022;</i></span><span>Amman . Dubai . Riyadh . Doha . New York <i>&#10022;</i></span>
+      </div>
+    </div>
+
+    <div class="cine-center">
+      <h2>Ready to <span class="it">begin?</span></h2>
+      <div class="pills">
+        <div class="pill-row">
+          <a href="../#contact" class="pill magnetic"><span class="dot" style="width:7px;height:7px;border-radius:50%;background:var(--accent);"></span>Start a project</a>
+          <a href="../work/" class="pill magnetic">View the reel</a>
+        </div>
+        <div class="pill-row">
+          <a href="../services/" class="pill sm magnetic">Services</a>
+          <a href="../work/" class="pill sm magnetic">Work</a>
+          <a href="../showcase/" class="pill sm magnetic">Showcase</a>
+          <a href="../pricing/" class="pill sm magnetic">Pricing</a>
+          <a href="../insights/" class="pill sm magnetic">Insights</a>
+        </div>
+        <div class="pill-row">
+          <a href="../jordan/" class="pill sm magnetic">Jordan</a>
+          <a href="../dubai/" class="pill sm magnetic">Dubai</a>
+          <a href="../doha/" class="pill sm magnetic">Doha</a>
+        </div>
+      </div>
+      <div class="cine-contact-info" style="display:flex; flex-wrap:wrap; gap:15px; justify-content:center; margin-top:30px; font-size:14px; opacity:0.8; font-weight:400; max-width: 800px; padding: 0 20px;">
+        <a href="tel:+962791656555" class="magnetic" style="color:var(--fg); text-decoration:none; display:flex; align-items:center; gap:5px;"><span style="opacity:0.5;">JO</span> +962 791 656 555</a>
+        <span style="opacity:0.3">|</span>
+        <a href="tel:+97455962969" class="magnetic" style="color:var(--fg); text-decoration:none; display:flex; align-items:center; gap:5px;"><span style="opacity:0.5;">QA</span> +974 559 629 69</a>
+        <span style="opacity:0.3">|</span>
+        <a href="https://wa.me/97455962969" target="_blank" class="magnetic" style="color:var(--fg); text-decoration:none;">WhatsApp</a>
+        <span style="opacity:0.3">|</span>
+        <a href="mailto:yousef@keyframeglobal.com" class="magnetic" style="color:var(--fg); text-decoration:none;">yousef@keyframeglobal.com</a>
+        <span style="opacity:0.3">|</span>
+        <a href="https://linkedin.com/company/keyframe-global" target="_blank" class="magnetic" style="color:var(--fg); text-decoration:none;">LinkedIn</a>
+      </div>
+    </div>
+
+    <div class="cine-bottom">
+      <div class="cr">&copy; 2026 Keyframe Global. Strategy in Motion.</div>
+      <div class="cine-badge">Crafted with <span class="hb">&#10084;</span> by <b>Keyframe Global</b></div>
+      <button class="totop magnetic" id="toTop" aria-label="Back to top">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 10l7-7 7 7M12 3v18" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+  </footer>
+</div>
+
+<script defer src="../js/site-pre.min.js?v=20260721"></script>
+  <script defer src="../js/vendor/gsap.min.js"></script>
+  <script defer src="../js/vendor/ScrollTrigger.min.js"></script>
+  <script defer src="../js/vendor/split-type.min.js"></script>
+  <script defer src="../js/vendor/lenis.min.js"></script>
+<script defer src="../js/site.min.js?v=20260721"></script>
+
+
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/97455962969?text=Hi%20Keyframe%2C%20I%27d%20like%20to%20talk%20about%20a%20project." target="_blank" rel="noopener" class="wa-float" aria-label="Chat with Keyframe Global on WhatsApp">
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.04 3C9.4 3 4 8.36 4 14.96c0 2.11.56 4.16 1.62 5.97L4 29l8.28-2.16a12.1 12.1 0 0 0 3.76.6h.01c6.63 0 12.03-5.36 12.03-11.96C28.08 8.36 22.67 3 16.04 3zm0 21.9h-.01c-1.8 0-3.56-.48-5.09-1.38l-.37-.22-4.91 1.28 1.31-4.77-.24-.39a9.86 9.86 0 0 1-1.52-5.26c0-5.46 4.48-9.9 9.99-9.9 2.67 0 5.18 1.03 7.07 2.9a9.79 9.79 0 0 1 2.93 7.01c0 5.46-4.48 9.9-9.99 9.9zm5.48-7.41c-.3-.15-1.77-.87-2.05-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.41-1.48-.89-.79-1.49-1.76-1.66-2.06-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.05 1.02-1.05 2.5 0 1.47 1.08 2.9 1.23 3.1.15.2 2.12 3.22 5.14 4.52.72.31 1.28.49 1.72.63.72.23 1.37.2 1.89.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35z"/></svg>
+</a>
+</body>
+</html>
