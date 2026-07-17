@@ -66,18 +66,6 @@
   #loader, #playhead, .lab-dock { display: none !important; }
   body { cursor: auto; }
   .lab-after { clip-path: inset(0 0 0 50%) !important; }
-
-@media (max-width: 760px) {
-  .lab-feature .lab-media { aspect-ratio: auto; }
-  .lab-feature .lab-info {
-    position: relative; left: 0; right: 0; bottom: 0;
-    flex-direction: column; align-items: flex-start;
-    padding: 16px 4px 0;
-  }
-  .lab-feature .lab-info h3 { color: var(--fg); font-size: 1.4rem; }
-  .lab-feature .lab-info p { color: var(--fg-muted); }
-  .lab-feature .lab-shade { display: none; }
-}
 </style>
 </noscript>
 <script type="application/ld+json">
@@ -221,6 +209,26 @@ html.lab-noscroll, html.lab-noscroll body { overflow: hidden !important; }
 .lab-endpad { height: 40px; }
 @media (prefers-reduced-motion: reduce) {
   .lab-media img, .lab-feature .lab-media img { transition: none; }
+}
+
+@media (max-width: 760px) {
+  .lab-feature {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .lab-feature .lab-media { 
+    aspect-ratio: 16 / 9;
+  }
+  .lab-feature .lab-info {
+    position: relative; 
+    left: auto; right: auto; bottom: auto;
+    flex-direction: column; 
+    align-items: flex-start;
+    padding: 0 4px;
+  }
+  .lab-feature .lab-info h3 { font-size: 1.6rem; margin-bottom: 8px; }
+  .lab-feature .lab-shade { display: none; }
 }
 </style>
 <!-- Google tag (gtag.js) -->
