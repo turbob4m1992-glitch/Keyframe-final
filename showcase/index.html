@@ -66,6 +66,18 @@
   #loader, #playhead, .lab-dock { display: none !important; }
   body { cursor: auto; }
   .lab-after { clip-path: inset(0 0 0 50%) !important; }
+
+@media (max-width: 760px) {
+  .lab-feature .lab-media { aspect-ratio: auto; }
+  .lab-feature .lab-info {
+    position: relative; left: 0; right: 0; bottom: 0;
+    flex-direction: column; align-items: flex-start;
+    padding: 16px 4px 0;
+  }
+  .lab-feature .lab-info h3 { color: var(--fg); font-size: 1.4rem; }
+  .lab-feature .lab-info p { color: var(--fg-muted); }
+  .lab-feature .lab-shade { display: none; }
+}
 </style>
 </noscript>
 <script type="application/ld+json">
@@ -277,8 +289,8 @@ html.lab-noscroll, html.lab-noscroll body { overflow: hidden !important; }
     <li style="--gradient-from: #4E9E99; --gradient-to: #7CC4C0;" class="nav-item">
       <a href="../#voices">
         <span class="nav-bg"></span><span class="nav-glow"></span>
-        <span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg></span>
-        <span class="nav-title">5 ★</span>
+        <span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+        <span class="nav-title" style="color: #FFD700;">5 ★</span>
       </a>
     </li>
     <li style="--gradient-from: #EBB54E; --gradient-to: #E0654E;" class="nav-item">
@@ -315,7 +327,7 @@ html.lab-noscroll, html.lab-noscroll body { overflow: hidden !important; }
     <a class="mm-link" href="../work/" style="--i:2"><span class="no">03</span>Work</a>
     <a class="mm-link" href="./" style="--i:3" aria-current="page"><span class="no">04</span>Showcase</a>
     <a class="mm-link" href="../#method" style="--i:4"><span class="no">05</span>Method</a>
-    <a class="mm-link" href="../#voices" style="--i:5"><span class="no">06</span>5 ★</a>
+    <a class="mm-link" href="../#voices" style="--i:5"><span class="no">06</span><span style="color: #FFD700;">5 ★</span></a>
     <a class="mm-link" href="#contact" style="--i:6"><span class="no">07</span>Contact</a>
     <a class="mm-link" href="../insights/" style="--i:7"><span class="no">08</span>Insights</a>
   </nav>
@@ -370,6 +382,7 @@ html.lab-noscroll, html.lab-noscroll body { overflow: hidden !important; }
             <div class="lab-shade"></div>
             <span class="lab-chip tag live">Live Client</span>
             <span class="lab-chip tc">TC 00:00:12:08</span>
+          </div>
             <div class="lab-info">
               <div>
                 <h3>L'Atelier Elena</h3>
@@ -379,7 +392,6 @@ html.lab-noscroll, html.lab-noscroll body { overflow: hidden !important; }
                 <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
               </span>
             </div>
-          </div>
         </figure>
 
         <figure class="lab-frame lab-feature reveal" data-lb data-lb-src="../img/showcase/safarin_mockup_presentation.jpg" data-lb-title="Safarin Steel" data-lb-note="Bilingual industrial platform, live build">
@@ -391,6 +403,7 @@ html.lab-noscroll, html.lab-noscroll body { overflow: hidden !important; }
             <div class="lab-shade"></div>
             <span class="lab-chip tag live">Live Client</span>
             <span class="lab-chip tc">TC 00:00:24:16</span>
+          </div>
             <div class="lab-info">
               <div>
                 <h3>Safarin Steel</h3>
@@ -400,7 +413,6 @@ html.lab-noscroll, html.lab-noscroll body { overflow: hidden !important; }
                 <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
               </span>
             </div>
-          </div>
         </figure>
 
         <figure class="lab-frame lab-feature reveal" data-lb data-lb-src="../img/showcase/drivein_mockup_presentation.jpg" data-lb-title="Smith's Ranch Drive-In" data-lb-note="Retro Americana for a 1956 drive-in, live build">
@@ -412,6 +424,7 @@ html.lab-noscroll, html.lab-noscroll body { overflow: hidden !important; }
             <div class="lab-shade"></div>
             <span class="lab-chip tag live">Live Client</span>
             <span class="lab-chip tc">TC 00:00:37:04</span>
+          </div>
             <div class="lab-info">
               <div>
                 <h3>Smith's Ranch Drive-In</h3>
@@ -421,7 +434,6 @@ html.lab-noscroll, html.lab-noscroll body { overflow: hidden !important; }
                 <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
               </span>
             </div>
-          </div>
         </figure>
       </div>
 
